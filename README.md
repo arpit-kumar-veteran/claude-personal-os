@@ -1,11 +1,11 @@
-# Personal AI Operating System
+# Personal Claude OS
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Last commit](https://img.shields.io/github/last-commit/arpit-kumar-veteran/personal-ai-operating-system)
+![Last commit](https://img.shields.io/github/last-commit/arpit-kumar-veteran/claude-personal-os)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Arpit_Kumar-0A66C2?logo=linkedin)](https://www.linkedin.com/in/arpit-kumar-veteran)
 ![Built with Claude](https://img.shields.io/badge/Built_with-Claude-D97757)
 
-A clonable pattern for running your own personal AI operating system on top of Claude.
+A clonable pattern for a personal AI operating system built on Claude. For people who want governance, not gimmicks.
 
 ## What this is
 

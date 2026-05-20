@@ -19,8 +19,8 @@ The fastest path to a working system:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/arpit-kumar-veteran/personal-ai-operating-system.git
-   cd personal-ai-operating-system
+   git clone https://github.com/arpit-kumar-veteran/claude-personal-os.git
+   cd claude-personal-os
    ```
 2. Copy the root template files into a new working folder:
    ```
