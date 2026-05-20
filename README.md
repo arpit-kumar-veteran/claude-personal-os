@@ -1,7 +1,7 @@
 # Personal AI Operating System
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Last commit](https://img.shields.io/github/last-commit/arpitkumar007/personal-ai-operating-system)
+![Last commit](https://img.shields.io/github/last-commit/arpit-kumar-veteran/personal-ai-operating-system)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Arpit_Kumar-0A66C2?logo=linkedin)](https://www.linkedin.com/in/arpit-kumar-veteran)
 ![Built with Claude](https://img.shields.io/badge/Built_with-Claude-D97757)
 

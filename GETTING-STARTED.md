@@ -19,7 +19,7 @@ The fastest path to a working system:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/arpitkumar007/personal-ai-operating-system.git
+   git clone https://github.com/arpit-kumar-veteran/personal-ai-operating-system.git
    cd personal-ai-operating-system
    ```
 2. Copy the root template files into a new working folder:
