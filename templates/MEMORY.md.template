@@ -1,0 +1,32 @@
+<!--
+Root memory template.
+
+How to use:
+1. Copy this file to the root of your OS folder.
+2. Rename it to MEMORY.md.
+3. Replace every {{REPLACE: ...}} marker.
+4. Keep all three sections. Append new facts to the Memory Log over time.
+5. Do not turn this file into a change log. Facts only.
+-->
+
+# {{REPLACE: Your Name}}'s Operating System Memory
+
+_Last updated: {{REPLACE: YYYY-MM-DD}}_
+
+## Active Projects
+
+| Project | Status | Notes |
+|---|---|---|
+| {{REPLACE: project name}} | {{REPLACE: active / paused / done}} | {{REPLACE: one-line context}} |
+| {{REPLACE: project name}} | {{REPLACE: active / paused / done}} | {{REPLACE: one-line context}} |
+
+## Profile
+
+{{REPLACE: Two to four lines about yourself that any future session should know. Your role. Your main responsibility. How you collaborate with Claude. Keep it tight. This is what a new session reads to know who it is helping.}}
+
+## Memory Log
+
+_Append new facts and decisions chronologically. Newest at the top. One line per entry where possible._
+
+- {{REPLACE: YYYY-MM-DD}}: {{REPLACE: a fact, contact, or decision worth remembering}}
+- {{REPLACE: YYYY-MM-DD}}: {{REPLACE: ...}}

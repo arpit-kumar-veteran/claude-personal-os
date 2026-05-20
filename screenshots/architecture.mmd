@@ -1,0 +1,48 @@
+graph TD
+    User["User: natural language request"]
+
+    subgraph RootLayer["Root Layer"]
+        CR["CLAUDE.md<br/>governance, preferences, rules"]
+        MR["MEMORY.md<br/>profile, active state, log"]
+        VR["voice-principles<br/>style enforcement"]
+    end
+
+    RoutingMap{"Routing Map<br/>in root CLAUDE.md"}
+
+    subgraph Workstations["Workstation Layer (folders)"]
+        W1["workstation A"]
+        W2["workstation B"]
+        W3["workstation N..."]
+    end
+
+    subgraph WSFiles["Each workstation contains"]
+        WC["CLAUDE.md<br/>Identity, Resources, Workflow, Editorial Rules"]
+        WM["MEMORY.md<br/>Contacts, Key Decisions"]
+    end
+
+    subgraph SkillReg["Skills Registry"]
+        SK1["audit-system"]
+        SK2["session-close"]
+        SK3["workstation-create"]
+        SK4["voice-check"]
+    end
+
+    subgraph Sched["Scheduled Cadence"]
+        SC1["Weekly audit"]
+        SC2["Periodic close-out"]
+    end
+
+    Ext["External: cloud drive, notes, calendar, email"]
+
+    User --> CR
+    CR --> MR
+    CR --> RoutingMap
+    RoutingMap --> Workstations
+    W1 --> WC
+    W1 --> WM
+    CR --> SkillReg
+    SkillReg --> Sched
+    Sched -.->|reports back| CR
+    Workstations --> Ext
+    VR -.->|enforces| CR
+    VR -.->|enforces| WC

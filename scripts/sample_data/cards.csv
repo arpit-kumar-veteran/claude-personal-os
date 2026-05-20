@@ -1,0 +1,36 @@
+date,description,amount,type
+2026-03-02,Coffee Shop X,400,debit
+2026-03-04,Online Shop C,3200,debit
+2026-03-06,Restaurant Q,2400,debit
+2026-03-08,Streaming Service,649,debit
+2026-03-10,Cafe N,480,debit
+2026-03-13,Subscription B,499,debit
+2026-03-16,Concert Hall,2500,debit
+2026-03-19,Online Shop C,1800,debit
+2026-03-21,Coffee Shop A,420,debit
+2026-03-24,Diner D,1650,debit
+2026-03-27,Retail Store P,3800,debit
+2026-03-30,Online Shop C,2200,debit
+2026-04-02,Streaming Service,649,debit
+2026-04-05,Coffee Shop A,400,debit
+2026-04-08,Restaurant Q,2100,debit
+2026-04-11,Cafe N,550,debit
+2026-04-14,Subscription B,499,debit
+2026-04-17,Online Shop C,2700,debit
+2026-04-20,Concert Hall,1800,debit
+2026-04-23,Coffee Shop X,420,debit
+2026-04-26,Retail Store P,4500,debit
+2026-04-29,Diner D,1750,debit
+2026-05-02,Streaming Service,649,debit
+2026-05-05,Coffee Shop A,420,debit
+2026-05-08,Online Shop C,2300,debit
+2026-05-11,Subscription B,499,debit
+2026-05-14,Cafe N,580,debit
+2026-05-17,Restaurant Q,2400,debit
+2026-05-19,Online Shop C,1900,debit
+2026-05-21,Cinema Hall,950,debit
+2026-05-23,Coffee Shop X,400,debit
+2026-05-25,Retail Store P,3200,debit
+2026-05-27,Diner D,1550,debit
+2026-05-29,Cafe N,520,debit
+2026-05-30,Subscription B,499,debit

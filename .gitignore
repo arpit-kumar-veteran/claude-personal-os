@@ -1,0 +1,29 @@
+# Editor and OS
+.obsidian/
+.claude/
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Data files that may contain personal information
+*.xlsx
+*.csv
+*.pdf
+
+# Environment
+.env
+.env.local
+
+# User-specific personalisation answers (reserved for v2 interview-driven setup)
+setup/answers.md
+setup/answers.local.md
+
+# Local script outputs
+output_example.xlsx
+example_dashboard.html
+
+# Allow sample data CSVs that ship with the repo
+!scripts/sample_data/*.csv

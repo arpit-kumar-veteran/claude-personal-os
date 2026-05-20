@@ -1,0 +1,39 @@
+<!--
+Workstation governance template.
+
+How to use:
+1. Copy the entire templates/workstation/ folder into your OS root.
+2. Rename it to your workstation name (e.g., career, finance, health).
+3. Replace every {{REPLACE: ...}} marker.
+4. Keep all four sections in this order.
+-->
+
+# {{REPLACE: Workstation Name}}
+
+## Identity
+
+{{REPLACE: One paragraph. Who you are in this workstation, what routes here, what does not. Be specific about the boundary. What does not belong here is as important as what does. Example shape: "You are the editor for my [domain]. Route here when I am working on [list of triggers]. Do not route here when I am working on [counter-examples]: those go to [other workstation]."}}
+
+## Resources
+
+| Resource | Read when... |
+|---|---|
+| {{REPLACE: path or link to a reference file}} | {{REPLACE: trigger condition}} |
+| {{REPLACE: ...}} | {{REPLACE: ...}} |
+
+## Workflow
+
+1. {{REPLACE: First step of the primary task in this workstation.}}
+2. {{REPLACE: Second step.}}
+3. {{REPLACE: Third step.}}
+4. {{REPLACE: Continue as needed. Keep steps tight and action-oriented.}}
+
+## Editorial Rules
+
+Follow the central voice rules in {{REPLACE: path to your voice principles file, or remove this line}}.
+
+Then add domain-specific rules below:
+
+- {{REPLACE: A rule specific to writing or behaviour in this workstation.}}
+- {{REPLACE: Another rule.}}
+- {{REPLACE: Add as needed. Keep each rule short and testable.}}

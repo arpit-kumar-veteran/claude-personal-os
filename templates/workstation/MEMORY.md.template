@@ -1,0 +1,26 @@
+<!--
+Workstation memory template.
+
+How to use:
+1. Copy alongside the workstation CLAUDE.md.template inside your workstation folder.
+2. Rename to MEMORY.md.
+3. Replace every {{REPLACE: ...}} marker.
+4. Keep both sections. Append new entries over time.
+5. Facts only. No change logs, no version notes.
+-->
+
+# {{REPLACE: Workstation Name}} Memory
+
+_Last updated: {{REPLACE: YYYY-MM-DD}}_
+
+## Contacts
+
+| Name | Role | Context |
+|---|---|---|
+| {{REPLACE: contact name}} | {{REPLACE: their role}} | {{REPLACE: how they relate to this workstation}} |
+| {{REPLACE: ...}} | {{REPLACE: ...}} | {{REPLACE: ...}} |
+
+## Key Decisions
+
+- {{REPLACE: YYYY-MM-DD}}: {{REPLACE: a decision made and the reason for it}}
+- {{REPLACE: YYYY-MM-DD}}: {{REPLACE: ...}}

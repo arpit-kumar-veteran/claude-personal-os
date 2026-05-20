@@ -1,0 +1,41 @@
+date,description,amount,type
+2026-03-01,Salary Inc,200000,credit
+2026-03-02,Grocery Store B,4500,debit
+2026-03-02,Coffee Shop A,350,debit
+2026-03-03,Electric Co,3200,debit
+2026-03-04,Online Shop C,2400,debit
+2026-03-05,Coffee Shop X,400,debit
+2026-03-06,Restaurant Q,1800,debit
+2026-03-07,Internet Co,1500,debit
+2026-03-08,Uber,650,debit
+2026-03-09,Cinema Hall,800,debit
+2026-03-10,Petrol Station,3000,debit
+2026-03-12,Vendor A,2200,debit
+2026-03-15,Supermarket M,6800,debit
+2026-03-18,Subscription B,499,debit
+2026-03-22,Diner D,1450,debit
+2026-03-25,Cafe N,520,debit
+2026-03-28,Water Co,800,debit
+2026-04-01,Salary Inc,200000,credit
+2026-04-03,Grocery Store B,5100,debit
+2026-04-04,Coffee Shop A,400,debit
+2026-04-05,Electric Co,3400,debit
+2026-04-07,Vendor A,2200,debit
+2026-04-09,Petrol Station,2800,debit
+2026-04-11,Online Shop C,1900,debit
+2026-04-13,Uber,920,debit
+2026-04-15,Cinema Hall,1200,debit
+2026-04-17,Refund Inc,500,credit
+2026-04-19,Diner D,1650,debit
+2026-04-22,Internet Co,1500,debit
+2026-04-25,Supermarket M,4200,debit
+2026-04-28,Subscription B,499,debit
+2026-05-01,Salary Inc,200000,credit
+2026-05-02,Grocery Store B,4800,debit
+2026-05-04,Coffee Shop A,380,debit
+2026-05-06,Electric Co,3100,debit
+2026-05-08,Cafe N,650,debit
+2026-05-10,Petrol Station,3200,debit
+2026-05-12,Water Co,850,debit
+2026-05-15,Uber,780,debit
+2026-05-18,Online Shop C,2100,debit

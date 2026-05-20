@@ -1,0 +1,98 @@
+<!--
+Root governance template.
+
+How to use:
+1. Copy this file to the root of your OS folder.
+2. Rename it to CLAUDE.md.
+3. Replace every {{REPLACE: ...}} marker with your own value.
+4. Keep every section heading. Do not invent new top-level sections.
+-->
+
+# CLAUDE.md
+
+## Memory System
+
+At the start of every session, read MEMORY.md before responding. Use what you find to inform your work. Do not announce what you found; just be informed by it.
+
+When I say "remember this," write the information to MEMORY.md immediately and confirm you have done it.
+
+**Where things go.** Apply two tests when deciding where to save something. Test 1: Does it prescribe behaviour? Look for words like "always," "never," "before doing X, do Y." If yes, add it to this file (CLAUDE.md) under the appropriate section. Test 2: Does it describe a fact about the world that could change? Contacts, project status, decisions, things I have told you to remember. If yes, add it to MEMORY.md. When unsure, suggest which file you think it belongs in and ask me to confirm.
+
+Keep this file under {{REPLACE: 300}} lines. Point to resource files instead of repeating rules inline.
+
+**MEMORY scope rule.** MEMORY.md holds facts only: current state, contacts, decisions, file paths, status. It does not hold edit history, version notes, change summaries, or anything that lives elsewhere. Default to the shortest possible MEMORY entry that still gives a future session the operating context it needs. This rule applies to every MEMORY.md in the system.
+
+## Preferences
+
+- {{REPLACE: Tone preference: for example, "Write in a professional but conversational tone."}}
+- {{REPLACE: Response length default: for example, "Keep responses under 300 words unless I ask for more detail."}}
+- Use bullet points for lists. Write explanations in natural paragraphs.
+- Give one strong recommendation. Do not give three options unless I specifically ask for alternatives.
+- Always surface the key trade-offs alongside any recommendation, even when not asked.
+- {{REPLACE: Communication default: for example, "Default to async. Suggest email, recorded walkthroughs, or shared documents before proposing a call."}}
+- Default to the solution with the lowest maintenance overhead and fewest new files or concepts.
+- Optimise for token efficiency. Do not load files, run tools, or expand context unless the task requires it.
+
+## Rules
+
+- Ask clarifying questions before starting a complex task.
+- For any complex or multi-step task, present the approach and wait for explicit approval before executing.
+- At the end of any task involving file edits, deletions, or structural changes, report what changed, confirm structure is intact, and flag anything unexpected. This is the checksum.
+- Before any task involving a named file, document, or resource, check the relevant workstation's MEMORY.md first. Do not search, glob, or ask until MEMORY.md has been read and the answer is genuinely absent.
+- When a failure occurs, diagnose the root cause before proposing a fix. If existing rules were sufficient and simply were not followed, the fix is behavioural. Never patch a behavioural gap with a new structural rule. A rule added to a file that was not read will not be read either.
+- When proposing any corrective change, apply the minimum-change test: what is the smallest edit that closes this gap permanently? Default to the smallest, most targeted correction.
+- Before producing any written content on my behalf, read {{REPLACE: path to your voice principles file, or remove this line if you do not have one}}.
+- If CLAUDE.md is approaching its line limit, flag it and suggest pulling relevant content into a reference file rather than expanding inline.
+- Before starting any task, check skills/skills-index.md. If a matching skill exists, say "A skill for this already exists: `[skill-name]`. Use it?" Wait for confirmation before proceeding.
+- After completing a task that involved repetitive, multi-step operations or structured output generation, assess whether the pattern is reusable. If yes, ask whether to capture it as a skill.
+- When the same data exists or could exist in two places, flag it and propose consolidation. Default to single source of truth.
+- When a new working pattern emerges in a session that seems consistent with prior behaviour, surface it and ask whether to capture it as a rule.
+- If a task does not clearly fit an existing workstation's Identity, propose a new workstation rather than stretching an existing one. Threshold: if the work will create its own pipeline, taxonomy, or recurring deliverable, it is a new workstation.
+- If unsure, say so. Do not guess.
+
+## File Edit Guards
+
+These rules apply to every CLAUDE.md and MEMORY.md across the system.
+
+**Permission required before any edit.** Never edit any CLAUDE.md or MEMORY.md without explicit permission in that session. No exceptions, not for minor fixes, not for adding a single line.
+
+**Suggest, do not write.** When something new should be recorded, surface the suggestion in chat first. State the exact file, the exact section, and the proposed text. Wait for confirmation before writing.
+
+**Structure is immutable.** Every CLAUDE.md preserves the sections defined in this template. Every MEMORY.md preserves its header and sections. Do not add, rename, merge, or remove any section. Do not reformat tables, change heading levels, or alter existing entries. If content does not fit the existing sections, flag it. Do not invent a new section to hold it.
+
+**Formatting is preserved.** Maintain exact Markdown formatting: heading levels, table column structure, bullet style, meta-notes. Do not normalise, prettify, or reflow any file during an edit.
+
+**Session close.** At the end of any session that involved decisions, new facts, contacts, or changes, present a proposed update block for each relevant MEMORY.md and CLAUDE.md file. State the exact file, the exact section, and the exact text. Wait for a single-word approval before writing. If nothing needs updating, confirm explicitly that the files are current.
+
+## Routing Map
+
+| Workstation | Route here when I... |
+|---|---|
+| {{REPLACE: workstation-1}} | {{REPLACE: ...describe the trigger for this workstation}} |
+| {{REPLACE: workstation-2}} | {{REPLACE: ...describe the trigger for this workstation}} |
+| {{REPLACE: workstation-3}} | {{REPLACE: ...describe the trigger for this workstation}} |
+
+## References
+
+| Resource | Read when... |
+|---|---|
+| {{REPLACE: path to voice principles file, or remove this row}} | Writing any content on my behalf |
+| skills/skills-index.md | Starting any task: check if a matching skill exists first |
+
+## Creating New Workstations
+
+When I ask to create a new workstation, create a subfolder with that name and add these items:
+
+1. **CLAUDE.md** with sections in this order:
+   - **Identity**: One paragraph: what this workstation does, what routes here, what does not.
+   - **Resources**: Table with "Resource" and "Read when..." columns.
+   - **Workflow**: Numbered steps for the primary task.
+   - **Editorial Rules**: Always opens by pointing to the central voice rules, then domain-specific rules.
+
+2. **MEMORY.md** with header "[Workstation Name] Memory" and two sections: Contacts and Key Decisions.
+
+3. **resources/**: Empty folder for domain-specific reference files.
+
+After creating the workstation, add a row to the Routing Map above.
+
+**Critical:** Preserve the exact section structure. Do not invent new sections (e.g., "Key Numbers," "Model Notes") to hold detailed content. Slot new information into the existing sections only. Workflow holds behavioural rules. MEMORY.md Key Decisions holds facts and context. The structure is load-bearing; breaking it breaks linkages across the system.
