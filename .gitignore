@@ -25,5 +25,8 @@ setup/answers.local.md
 output_example.xlsx
 example_dashboard.html
 
+# Personal launch / promotion assets (never committed)
+resources/
+
 # Allow sample data CSVs that ship with the repo
 !scripts/sample_data/*.csv
