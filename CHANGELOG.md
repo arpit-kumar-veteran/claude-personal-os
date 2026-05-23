@@ -2,6 +2,17 @@
 
 All notable changes to this pattern are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/). Version numbers follow [Semantic Versioning](https://semver.org/) loosely: major versions reflect substantial changes to the pattern, minor versions add capabilities, patch versions fix bugs in examples or documentation.
 
+## [0.1.3] - 2026-05-21
+
+### Changed
+
+- Renamed `START-HERE.md` to `0-CLICK-HERE-TO-START.md`. The new name does two things at once: the `0-` prefix forces the file to the top of every alphabetically-sorted file list (Finder, GitHub web, Claude Code tree, Claude Cowork tree), and the verb phrase tells a non-technical user what action to take. Old name only identified the file; new name instructs the action.
+- Updated `README.md` (file tree + "How to adapt for yourself" link) and `GETTING-STARTED.md` (banner link) to point at the new filename.
+
+### Why this release
+
+A user opening the unzipped folder for the first time scans the file list looking for "what do I open first?". The previous filename `START-HERE.md` answered that question only if the user noticed the all-caps signal. `0-CLICK-HERE-TO-START.md` answers it visually (sort order) and verbally (the action verb is in the filename).
+
 ## [0.1.2] - 2026-05-21
 
 ### Changed

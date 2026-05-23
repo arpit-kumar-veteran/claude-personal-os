@@ -68,7 +68,7 @@ The mechanics are slightly different per app, but the idea is the same: tell you
 - **In Claude Code desktop:** launch the app. From the top menu choose **File** > **Open Folder**. Pick the folder you downloaded (`claude-personal-os-main` or `claude-personal-os`).
 - **In Claude Code CLI:** in your terminal, `cd` into the folder and run `claude`.
 
-You should see a list of files in the app. If you see `README.md`, `START-HERE.md`, and a few folders, you are in the right place.
+You should see a list of files in the app. If you see `README.md`, `0-CLICK-HERE-TO-START.md` (this file), and a few folders, you are in the right place.
 
 ### Step 2: Paste this single line
 

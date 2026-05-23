@@ -22,7 +22,7 @@ In one paragraph: two tiers of memory (root plus per-workstation), strict file e
 ```
 .
 ├── README.md                       (this file)
-├── START-HERE.md                   (non-coder entry point — start here)
+├── 0-CLICK-HERE-TO-START.md        (non-coder entry point. Click this first.)
 ├── setup/                          (interactive bootstrap flow)
 │   ├── bootstrap.md                (the master setup prompt Claude follows)
 │   ├── ingest.md                   (how Claude handles LinkedIn, resume, pitch deck)
@@ -54,7 +54,7 @@ In one paragraph: two tiers of memory (root plus per-workstation), strict file e
 
 Two paths land you at the same destination: a working personal AI operating system tuned to you.
 
-**Recommended for everyone.** Download this repo (Code → Download ZIP, or `git clone`), then open [START-HERE.md](START-HERE.md). It walks you through picking a Claude app (Cowork is the easiest), opening the folder, and pasting one line that triggers an interactive setup. Claude will interview you, offer to read your LinkedIn / resume / pitch deck, and create your personalised OS folder for you. About 30 minutes end to end.
+**Recommended for everyone.** Download this repo (Code → Download ZIP, or `git clone`), then open [0-CLICK-HERE-TO-START.md](0-CLICK-HERE-TO-START.md). It walks you through picking a Claude app (Cowork is the easiest), opening the folder, and pasting one line that triggers an interactive setup. Claude will interview you, offer to read your LinkedIn / resume / pitch deck, and create your personalised OS folder for you. About 30 minutes end to end.
 
 **For developers who want manual control.** Read [GETTING-STARTED.md](GETTING-STARTED.md) for the manual install (copy templates by hand, replace `{{REPLACE: ...}}` markers yourself, build your routing map directly).
 
