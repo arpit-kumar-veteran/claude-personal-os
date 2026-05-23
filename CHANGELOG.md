@@ -2,6 +2,21 @@
 
 All notable changes to this pattern are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/). Version numbers follow [Semantic Versioning](https://semver.org/) loosely: major versions reflect substantial changes to the pattern, minor versions add capabilities, patch versions fix bugs in examples or documentation.
 
+## [0.1.2] - 2026-05-21
+
+### Changed
+
+- `START-HERE.md` now opens with a "Pick your Claude app" section that names three install paths and ranks them by user-friendliness:
+  1. **Claude Cowork desktop app** (recommended for everyone, including non-coders)
+  2. **Claude Code desktop app** (also user-friendly, alternative to Cowork)
+  3. **Claude Code CLI** (explicitly marked "developer only", placed third, not recommended for non-technical users)
+- Step 1 of the three-step flow now shows the slightly different "open the folder" mechanics for each of the three apps.
+- `README.md` "How to adapt for yourself" section rewritten to reflect the new app hierarchy and direct everyone to START-HERE.md by default.
+
+### Why this release
+
+User feedback after a second install attempt: the previous version of `START-HERE.md` said "open the folder in Claude Code" without distinguishing Cowork (the most user-friendly app for non-coders) from Code (developer-oriented) from the CLI (terminal). For non-technical users, this ambiguity adds friction at exactly the moment they need the smoothest experience. v0.1.2 makes the choice explicit and ranked.
+
 ## [0.1.1] - 2026-05-21
 
 ### Added
