@@ -22,13 +22,18 @@ In one paragraph: two tiers of memory (root plus per-workstation), strict file e
 ```
 .
 ├── README.md                       (this file)
-├── GETTING-STARTED.md              (5 to 30 minute deployment guide)
+├── START-HERE.md                   (non-coder entry point — start here)
+├── setup/                          (interactive bootstrap flow)
+│   ├── bootstrap.md                (the master setup prompt Claude follows)
+│   ├── ingest.md                   (how Claude handles LinkedIn, resume, pitch deck)
+│   └── interview.md                (the question reference)
+├── GETTING-STARTED.md              (manual install guide, for developers)
 ├── ARCHITECTURE.md                 (design overview + Mermaid diagram)
 ├── METRICS.md                      (what to expect from a running deployment)
 ├── ROADMAP.md                      (current and planned versions)
 ├── CHANGELOG.md                    (release notes)
 ├── CONTRIBUTING.md                 (how to contribute, what stays in your fork)
-├── SETUP-SKILL.md                  (v0.2 design spec for interview-driven setup)
+├── SETUP-SKILL.md                  (v0.2 design spec for the auto-installing skill)
 ├── LICENSE                         (MIT)
 ├── templates/                      (root and workstation templates)
 │   ├── CLAUDE.md.template
@@ -47,10 +52,11 @@ In one paragraph: two tiers of memory (root plus per-workstation), strict file e
 
 ## How to adapt for yourself
 
-1. Clone the repository.
-2. Read [GETTING-STARTED.md](GETTING-STARTED.md). The Quick start gets you running in about 10 minutes.
-3. Personalise the templates by replacing every `{{REPLACE: ...}}` marker.
-4. Create your first workstation following the same pattern.
+**For non-coders (recommended).** Download this repo (Code → Download ZIP, or `git clone`), open the folder in Claude Code, then open [START-HERE.md](START-HERE.md) and follow the three steps. Claude will interview you, offer to read your LinkedIn / resume / pitch deck, and create your personalised OS folder for you. About 30 minutes end to end.
+
+**For developers.** Read [GETTING-STARTED.md](GETTING-STARTED.md) for the manual install (copy templates, replace `{{REPLACE: ...}}` markers by hand, build your routing map).
+
+Either path lands you at the same destination: a working personal AI operating system tuned to you.
 5. Run the audit. Iterate from there.
 
 v0.1 of this repository requires manual personalisation. v0.2 (ships next week) adds a setup skill that runs the entire personalisation as an interview. See [ROADMAP.md](ROADMAP.md).

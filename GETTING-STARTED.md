@@ -1,6 +1,8 @@
-# Getting Started
+# Getting Started (manual install)
 
-This guide walks you through deploying the personal AI operating system pattern on your own machine. It is written for a non-coder. The longest single step is reading this guide.
+> **Looking for the easy path?** Open [START-HERE.md](START-HERE.md). Claude will interview you, offer to read your LinkedIn or resume, and create your personalised OS for you. About 30 minutes end to end. No commands to type. Recommended for everyone except developers who specifically want manual control.
+
+This guide is the **manual install** path: copy templates by hand, replace `{{REPLACE: ...}}` markers yourself, build your routing map directly. Most useful for developers who want to understand every moving part before letting Claude write files on their behalf.
 
 ## Prerequisites
 

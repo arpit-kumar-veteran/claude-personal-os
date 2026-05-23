@@ -2,6 +2,26 @@
 
 All notable changes to this pattern are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/). Version numbers follow [Semantic Versioning](https://semver.org/) loosely: major versions reflect substantial changes to the pattern, minor versions add capabilities, patch versions fix bugs in examples or documentation.
 
+## [0.1.1] - 2026-05-21
+
+### Added
+
+- `START-HERE.md` at the repository root. The single-file non-coder entry point. Three concrete steps, plain language, includes the Download-ZIP option for users who do not know git.
+- `setup/bootstrap.md` — the master interactive setup prompt. The user pastes one line into Claude Code and Claude walks them through 9 phases: welcome, file ingestion, identity, voice, workstations, cadence, confirm-and-create, show-and-explain, save-and-exit. Asks one question at a time. Confirms before every file write. Tells the user exactly what got created and where.
+- `setup/ingest.md` — defines how Claude handles uploaded LinkedIn PDFs, resumes, pitch decks, voice guides, and "about me" documents. Pre-fills upcoming answers from what it reads. Default privacy-conservative.
+- `setup/interview.md` — reference list of every question asked during bootstrap and which template placeholder it fills.
+
+### Changed
+
+- `README.md` "How to adapt for yourself" section now leads with the non-coder path (`START-HERE.md`) and points developers at `GETTING-STARTED.md` as the manual fallback.
+- `GETTING-STARTED.md` reframed as the manual install path, with a banner at the top directing non-developers to `START-HERE.md`.
+
+### Why this release
+
+Real user testing exposed v0.1 as a developer's release dressed up as a non-coder release. The templates carried plain-English placeholders, but installation still required the user to copy files, paste prompts, and remember to confirm writes. v0.1.1 adds a single-prompt bootstrap that walks any user through setup with one-question-at-a-time pacing, explicit confirmation before every file write, and the option to share files (LinkedIn, resume, pitch deck) so Claude can pre-fill answers automatically.
+
+This is NOT v0.2. v0.2 ships the bootstrap as a registered skill that auto-triggers from natural language. v0.1.1 is the same flow expressed as a Markdown prompt the user pastes manually. Same result, less engineering.
+
 ## [0.1.0] - 2026-05-20
 
 ### Added
