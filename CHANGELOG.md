@@ -7,7 +7,7 @@ All notable changes to this pattern are recorded here. The format follows [Keep 
 ### Fixed
 
 - Three em dashes in the v0.1.1 CHANGELOG entries (lines describing `setup/bootstrap.md`, `setup/ingest.md`, and `setup/interview.md`). The em-dash purge in Phase 8 of the original build covered every file in the repo at that time, but the v0.1.1 commit reintroduced three em dashes inside its own CHANGELOG entries. Now replaced with colons. Voice rule: zero em dashes anywhere in the repo, including the changelog.
-- `setup/bootstrap.md` Phase 4 question 3 listed "leverage" and "unlock" as concrete examples of words to avoid. Those words are themselves in the project's banned-word list, so naming them inside the example pattern-matched against the voice sweep. Rewritten to use neutral wording ("jargon you dislike, common marketing-deck words") that preserves the question's intent without including the trigger words.
+- `setup/bootstrap.md` Phase 4 question 3 named two specific banned words as concrete examples of words to avoid. Those words are themselves on the project's banned list, so naming them inside the example pattern-matched against the voice sweep. Rewritten to use neutral wording ("jargon you dislike, common marketing-deck words") that preserves the question's intent without including any trigger word.
 
 ### Why this release
 
