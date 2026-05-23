@@ -2,6 +2,17 @@
 
 All notable changes to this pattern are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/). Version numbers follow [Semantic Versioning](https://semver.org/) loosely: major versions reflect substantial changes to the pattern, minor versions add capabilities, patch versions fix bugs in examples or documentation.
 
+## [0.1.4] - 2026-05-24
+
+### Fixed
+
+- Three em dashes in the v0.1.1 CHANGELOG entries (lines describing `setup/bootstrap.md`, `setup/ingest.md`, and `setup/interview.md`). The em-dash purge in Phase 8 of the original build covered every file in the repo at that time, but the v0.1.1 commit reintroduced three em dashes inside its own CHANGELOG entries. Now replaced with colons. Voice rule: zero em dashes anywhere in the repo, including the changelog.
+- `setup/bootstrap.md` Phase 4 question 3 listed "leverage" and "unlock" as concrete examples of words to avoid. Those words are themselves in the project's banned-word list, so naming them inside the example pattern-matched against the voice sweep. Rewritten to use neutral wording ("jargon you dislike, common marketing-deck words") that preserves the question's intent without including the trigger words.
+
+### Why this release
+
+A full repo audit (CRITICAL / WARNING / INFO categorisation following the system's own audit skill) found two voice-rule violations. Both were small and neither broke the system. Fixing them keeps the repo perfectly aligned with the rules it preaches.
+
 ## [0.1.3] - 2026-05-21
 
 ### Changed
@@ -33,9 +44,9 @@ User feedback after a second install attempt: the previous version of `START-HER
 ### Added
 
 - `START-HERE.md` at the repository root. The single-file non-coder entry point. Three concrete steps, plain language, includes the Download-ZIP option for users who do not know git.
-- `setup/bootstrap.md` — the master interactive setup prompt. The user pastes one line into Claude Code and Claude walks them through 9 phases: welcome, file ingestion, identity, voice, workstations, cadence, confirm-and-create, show-and-explain, save-and-exit. Asks one question at a time. Confirms before every file write. Tells the user exactly what got created and where.
-- `setup/ingest.md` — defines how Claude handles uploaded LinkedIn PDFs, resumes, pitch decks, voice guides, and "about me" documents. Pre-fills upcoming answers from what it reads. Default privacy-conservative.
-- `setup/interview.md` — reference list of every question asked during bootstrap and which template placeholder it fills.
+- `setup/bootstrap.md`: the master interactive setup prompt. The user pastes one line into Claude Code and Claude walks them through 9 phases: welcome, file ingestion, identity, voice, workstations, cadence, confirm-and-create, show-and-explain, save-and-exit. Asks one question at a time. Confirms before every file write. Tells the user exactly what got created and where.
+- `setup/ingest.md`: defines how Claude handles uploaded LinkedIn PDFs, resumes, pitch decks, voice guides, and "about me" documents. Pre-fills upcoming answers from what it reads. Default privacy-conservative.
+- `setup/interview.md`: reference list of every question asked during bootstrap and which template placeholder it fills.
 
 ### Changed
 

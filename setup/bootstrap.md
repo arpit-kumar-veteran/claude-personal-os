@@ -65,7 +65,7 @@ Ask one at a time. Pre-fill from ingested files where possible. For pre-filled a
 
 1. How do you want me to write when I write on your behalf? Examples: professional, conversational, blunt, formal. Or describe in your own words.
 2. How long should my responses be by default? Short (under 100 words), Medium (100-300 words), or Long (no limit).
-3. Any words or phrases I should never use? Examples: "leverage", "unlock", emojis, exclamation marks.
+3. Any words or phrases I should never use? Examples: jargon you dislike, common marketing-deck words, emojis, exclamation marks.
 4. If you already have a voice guide file, point me at it. Otherwise skip.
 
 ## Phase 5: Workstations
