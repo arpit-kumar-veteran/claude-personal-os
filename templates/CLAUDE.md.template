@@ -54,6 +54,13 @@ Keep this file under {{REPLACE: 300}} lines. Point to resource files instead of 
 - When output is shaped by a specific reference file, cite it inline as `[SOURCE: filename]`. Apply to decisions, recommendations, and analysis. Not to mechanical operations.
 - When facts get corrected in working documents, replace cleanly. Do not leave "was X, now Y" framing in current-state sections. Historical context belongs in a log or changelog, not in the operating summary.
 - When two sources disagree on the same fact, defer to the source highest in the source-of-truth hierarchy. Define your hierarchy during setup: for example, a verified spreadsheet outranks a connector feed, which outranks memory. Write your hierarchy into the References section below.
+- When the same contact or entity appears in more than one workstation, keep a separate record in each. The relationship mode differs by workstation. Do not merge or sync automatically. Note the cross-workstation connection in each record.
+- Working files (scripts, drafts, changelogs, methodology docs, version history) live inside the relevant workstation's `resources/` folder. Final approved outputs go to shared drives or external destinations. When in doubt, ask which it is before saving.
+- Superseded files and version history stay inside the workstation's own `resources/` version folder. Never move a live workstation's backups elsewhere. Distinguish: living master documents keep a changelog; dead one-off files just sit in the version folder.
+- Session-close cadence is workstation-specific. High-activity workstations (career, finances, consulting) close every session. Low-activity workstations (property, archive) close monthly. Define your cadence per workstation in the relevant CLAUDE.md.
+- Scheduled tasks stack without overlap. Retrospective weekly tasks run Friday at 10:00, 11:00, 12:00, 13:00 (one per hour). Forward-looking weekly tasks run Monday at 07:00, 08:00, 09:00. Monthly tasks run on the 1st at 10:00, 11:00, 12:00. No two tasks at the same hour.
+- When any paid connector (Apollo, Vibe, financial API, enrichment service) is about to spend credits, stop and state: the contact or request count, the credit cost, and the remaining balance if known. Wait for explicit approval before proceeding. Free actions (web search, read-only lookups) do not require this check.
+- When a Thinking HQ mode is invoked from inside any other workstation, load the relevant Thinking HQ resources and run the requested mode. Maintain the originating workstation's context. Tag outputs with both the workstation source and the mode used.
 
 ## File Edit Guards
 

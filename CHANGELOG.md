@@ -2,6 +2,27 @@
 
 All notable changes to this pattern are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/). Version numbers follow [Semantic Versioning](https://semver.org/) loosely: major versions reflect substantial changes to the pattern, minor versions add capabilities, patch versions fix bugs in examples or documentation.
 
+## [0.3.0] - 2026-06-04
+
+### Added
+
+- Nine additional workstation examples: `thinking-hq` (four structured reasoning modes), `finances-hq` (net worth, FIRE planning, source-of-truth hierarchy), `health-hq` (multi-person with index-first architecture), `consulting-hq` (freelance pipeline), `venture-hq` (startup and co-founder), `life-transition-hq` (major decisions), `intel-hq` (recurring digest processing), `relationship-hq` (personal CRM with entity mirroring), `content-hq` (content production pipeline). Brings total workstation examples to 16.
+- Four additional skills: `deep-research.skill.md` (multi-source adversarial research), `outreach.skill.md` (cold and warm outreach across domains), `workstation-create-full.skill.md` (full interview-driven workstation creation), `content-repurpose.skill.md` (one piece into multiple formats). Brings total skills to 10.
+- `infrastructure/` folder: `ARCHIVE.md.template` (per-workstation archive for completed projects and superseded decisions), `auto-memory-system.md` (four-type memory model with index pattern and line ceiling discipline), and three ready-to-run scheduled task templates (`weekly-audit.task.md`, `weekly-memory-review.task.md`, `monthly-close.task.md`).
+- `WHAT-WEEK-12-LOOKS-LIKE.md`: what a mature deployment looks like at month 3. Covers structural metrics, what sessions feel like, what changed between week 1 and week 12, and the compound effect.
+- `case-studies/early-adopter-template.md`: structured template for documenting a real deployment with sanitised data.
+
+### Changed
+
+- `CLAUDE.md.template`: eight advanced governance rules added: entity mirroring (same contact, different modes across workstations), working-files-in-workstation rule, archiving and version-control rule, session-close cadence tiers, scheduled task stacking standards, paid connector credit-spend guard, cross-workstation trigger system, Thinking HQ invocation protocol.
+- `skills/skills-index.md`: updated with four new skill entries.
+- `workstation-examples/README.md`: updated to show all 16 examples split into foundation (7) and advanced (9) groups.
+- `README.md`: updated file tree. Removed "Want more?" section as this repo now contains the full pattern.
+
+### Why this release
+
+v0.2 proved the foundation. v0.3 adds the compounding layer: the workstations that matter for complex professional lives, the skills that handle high-stakes recurring tasks, and the infrastructure that keeps a mature OS clean. Everything that was previously in a separate private release is now here.
+
 ## [0.2.0] - 2026-06-04
 
 ### Added

@@ -32,6 +32,7 @@ In one paragraph: two tiers of memory (root plus per-workstation), strict file e
 ├── README.md                          (this file)
 ├── 0-CLICK-HERE-TO-START.md           (non-coder entry point. Click this first.)
 ├── FIRST-WEEK.md                      (day-by-day guide for your first 7 days)
+├── WHAT-WEEK-12-LOOKS-LIKE.md         (what a mature deployment looks like at month 3)
 ├── INTEGRATIONS.md                    (which tools connect to which workstations)
 ├── setup/                             (interactive bootstrap flow)
 │   ├── bootstrap.md                   (the master setup prompt Claude follows)
@@ -51,28 +52,50 @@ In one paragraph: two tiers of memory (root plus per-workstation), strict file e
 │   └── workstation/
 │       ├── CLAUDE.md.template
 │       └── MEMORY.md.template
-├── workstation-examples/              (7 filled-in workstation examples)
+├── workstation-examples/              (16 filled-in workstation examples)
 │   ├── README.md
-│   ├── career-hq/
-│   ├── email-hq/
-│   ├── brand-hq/
-│   ├── meeting-hq/
-│   ├── expense-hq/
-│   ├── property-hq/
-│   └── learning-hq/
-├── skills/                            (6 registered skills)
+│   ├── career-hq/                     (foundation)
+│   ├── email-hq/                      (foundation)
+│   ├── brand-hq/                      (foundation)
+│   ├── meeting-hq/                    (foundation)
+│   ├── expense-hq/                    (foundation)
+│   ├── property-hq/                   (foundation)
+│   ├── learning-hq/                   (foundation)
+│   ├── thinking-hq/
+│   ├── finances-hq/
+│   ├── health-hq/
+│   ├── consulting-hq/
+│   ├── venture-hq/
+│   ├── life-transition-hq/
+│   ├── intel-hq/
+│   ├── relationship-hq/
+│   └── content-hq/
+├── skills/                            (10 registered skills)
 │   ├── skills-index.md                (registry: what exists, when to use it)
 │   ├── audit-system.skill.md
 │   ├── session-close.skill.md
 │   ├── voice-check.skill.md
 │   ├── memory-consolidation.skill.md
 │   ├── humanizer.skill.md
-│   └── scheduled-task.skill.md
+│   ├── scheduled-task.skill.md
+│   ├── deep-research.skill.md
+│   ├── outreach.skill.md
+│   ├── workstation-create-full.skill.md
+│   └── content-repurpose.skill.md
+├── infrastructure/                    (ready-to-run templates)
+│   ├── ARCHIVE.md.template
+│   ├── auto-memory-system.md
+│   └── scheduled-tasks/
+│       ├── weekly-audit.task.md
+│       ├── weekly-memory-review.task.md
+│       └── monthly-close.task.md
 ├── prompts/                           (5 reusable prompts + README)
 ├── docs/decisions/                    (8 Architecture Decision Records + index)
 ├── scripts/                           (2 runnable example scripts + sample data)
 ├── screenshots/                       (architecture diagram source + render)
-└── case-studies/                      (placeholder for future case studies)
+└── case-studies/
+    ├── README.md
+    └── early-adopter-template.md      (template for documenting a real deployment)
 ```
 
 ## How to set up
@@ -90,10 +113,6 @@ After setup: read [FIRST-WEEK.md](FIRST-WEEK.md) for a day-by-day guide to getti
 - It does not install an app or run a server. It creates a folder of files.
 - It does not guarantee productivity gains. It guarantees that Claude knows who you are and how you work. What you do with that is up to you.
 - It does not manage itself. You run the weekly audit. You close sessions. You decide what gets remembered. The system enforces your rules; you still make the rules.
-
-## Want more?
-
-This repository is the free tier. An advanced version with 12 mature workstations, 8 additional skills, scheduled task templates, MCP integration guides, and a full case study is available separately. See [ROADMAP.md](ROADMAP.md) for what is planned and what is already built.
 
 ## Credits
 

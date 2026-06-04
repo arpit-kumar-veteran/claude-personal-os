@@ -1,0 +1,42 @@
+<!--
+Per-workstation archive template.
+
+How to use:
+1. Copy this file into the relevant workstation folder.
+2. Rename it to ARCHIVE.md.
+3. Move stale or completed entries here from the workstation MEMORY.md when MEMORY.md exceeds its line limit or session-close flags entries as no longer active.
+4. This file is reference-only. It is never auto-loaded at session start.
+5. To access: ask explicitly, e.g. "open the archive for [workstation]" or "what did we decide about X?"
+-->
+
+# {{REPLACE: Workstation Name}} Archive
+
+_Reference only. Not loaded at session start. Pull explicitly when needed._
+
+## Completed Projects
+
+Projects that finished, shipped, or were formally closed. Each entry: name, close date, outcome, and one-line context for why it matters historically.
+
+| Project | Closed | Outcome | Notes |
+|---|---|---|---|
+| {{REPLACE: project name}} | {{REPLACE: YYYY-MM-DD}} | {{REPLACE: completed / cancelled / superseded}} | {{REPLACE: why this matters to remember}} |
+
+## Superseded Decisions
+
+Decisions that were made and then overturned or replaced. Keeping these prevents re-litigating closed questions with no new information.
+
+- {{REPLACE: YYYY-MM-DD}}: {{REPLACE: original decision}} — superseded by: {{REPLACE: what replaced it and why}}
+
+## Inactive Contacts
+
+Contacts who were relevant at one point but are no longer active in this workstation. Kept here to avoid re-adding them and re-assessing.
+
+| Name | Role at the time | Why inactive | Last contact |
+|---|---|---|---|
+| {{REPLACE: name}} | {{REPLACE: role}} | {{REPLACE: reason}} | {{REPLACE: YYYY-MM-DD}} |
+
+## Version History
+
+For workstations with living documents (master files, trackers, models): a log of significant versions with what changed and why. Snapshots live in `resources/[version-folder]/`; this log explains them.
+
+- {{REPLACE: YYYY-MM-DD}}: {{REPLACE: what version was created and what changed from the prior version}}

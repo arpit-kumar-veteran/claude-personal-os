@@ -16,6 +16,10 @@ Say: "Use the [skill-name] skill." Or say what you want to do in plain language 
 | memory-consolidation | `skills/memory-consolidation.skill.md` | Cleaning up a MEMORY.md file that has grown stale, duplicated, or over the line limit |
 | humanizer | `skills/humanizer.skill.md` | Removing AI-writing tells from any text to make it sound natural and human-authored |
 | scheduled-task | `skills/scheduled-task.skill.md` | Setting up a recurring automated task (weekly audit, monthly review, digest processing) |
+| deep-research | `skills/deep-research.skill.md` | Multi-source, adversarially verified research on any topic you will act on |
+| outreach | `skills/outreach.skill.md` | Drafting cold or warm outreach messages across job search, partnerships, venture, or network |
+| workstation-create-full | `skills/workstation-create-full.skill.md` | Full guided interview to create a new workstation with complete, placeholder-free files |
+| content-repurpose | `skills/content-repurpose.skill.md` | Turning one long-form piece into multiple formats rewritten for each platform |
 
 ## Adding a new skill
 

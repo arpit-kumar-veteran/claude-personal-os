@@ -1,6 +1,6 @@
 # Workstation Examples
 
-Seven filled-in workstation examples. Each one shows what a working CLAUDE.md and MEMORY.md looks like after personalisation. Use them as starting points; replace the content with your own.
+Sixteen filled-in workstation examples. Each one shows what a working CLAUDE.md and MEMORY.md looks like after personalisation. Use them as starting points; replace the content with your own.
 
 ## How to use these
 
@@ -11,7 +11,9 @@ Seven filled-in workstation examples. Each one shows what a working CLAUDE.md an
 
 You do not have to use all of them. Start with one or two that match your immediate needs. Add more as you find domains where Claude keeps losing context.
 
-## What is included
+## Foundation workstations (start here)
+
+These seven cover the most common needs for any professional. Set these up first.
 
 | Workstation | What it covers |
 |---|---|
@@ -22,6 +24,22 @@ You do not have to use all of them. Start with one or two that match your immedi
 | expense-hq | Monthly burn tracking, bank and card reconciliation, category taxonomy |
 | property-hq | Property or asset management, maintenance tracking, cost records |
 | learning-hq | Courses, books, skills development, knowledge capture |
+
+## Advanced workstations (add as your OS matures)
+
+These nine cover more complex or specialised domains. Add them when you hit the domain repeatedly in sessions and Claude keeps losing context.
+
+| Workstation | What it covers |
+|---|---|
+| thinking-hq | Structured reasoning modes: coach, strategist, co-founder, devil's advocate |
+| finances-hq | Net worth, investments, FIRE planning, allocation, source-of-truth hierarchy |
+| health-hq | Family health tracking, lab results, supplements, multi-person index system |
+| consulting-hq | Freelance and consulting pipeline, proposals, deliverables, client billing |
+| venture-hq | Side business, startup, co-founder search, market intel, investor conversations |
+| life-transition-hq | Relocation, career pivots, major decisions with long horizons and low reversibility |
+| intel-hq | Recurring newsletter and digest processing, signal extraction, routing |
+| relationship-hq | Personal CRM, network hygiene, follow-up cadence, conversation prep |
+| content-hq | Content production pipeline, repurposing, scheduling, cross-platform publishing |
 
 ## The difference between a template and an example
 
