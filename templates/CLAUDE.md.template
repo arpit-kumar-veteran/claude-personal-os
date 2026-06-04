@@ -49,6 +49,11 @@ Keep this file under {{REPLACE: 300}} lines. Point to resource files instead of 
 - When a new working pattern emerges in a session that seems consistent with prior behaviour, surface it and ask whether to capture it as a rule.
 - If a task does not clearly fit an existing workstation's Identity, propose a new workstation rather than stretching an existing one. Threshold: if the work will create its own pipeline, taxonomy, or recurring deliverable, it is a new workstation.
 - If unsure, say so. Do not guess.
+- Be direct. If something is weak, name the gaps specifically. No hedging, no favourable framing, no sugar-coating.
+- For any critical information the user will act on (facts, numbers, benchmarks, claims about people or entities), state a confidence level: high, medium, or low. Name the source. If the source is unverified, label it as such.
+- When output is shaped by a specific reference file, cite it inline as `[SOURCE: filename]`. Apply to decisions, recommendations, and analysis. Not to mechanical operations.
+- When facts get corrected in working documents, replace cleanly. Do not leave "was X, now Y" framing in current-state sections. Historical context belongs in a log or changelog, not in the operating summary.
+- When two sources disagree on the same fact, defer to the source highest in the source-of-truth hierarchy. Define your hierarchy during setup: for example, a verified spreadsheet outranks a connector feed, which outranks memory. Write your hierarchy into the References section below.
 
 ## File Edit Guards
 
@@ -78,6 +83,15 @@ These rules apply to every CLAUDE.md and MEMORY.md across the system.
 |---|---|
 | {{REPLACE: path to voice principles file, or remove this row}} | Writing any content on my behalf |
 | skills/skills-index.md | Starting any task: check if a matching skill exists first |
+
+## Source-of-Truth Hierarchy
+
+When two sources disagree on the same fact, the source ranked higher below wins. Define your own hierarchy here during setup.
+
+1. {{REPLACE: your primary source, e.g. "verified spreadsheet or master document"}}
+2. {{REPLACE: your secondary source, e.g. "live data connector or API feed"}}
+3. {{REPLACE: your tertiary source, e.g. "MEMORY.md entry"}}
+4. {{REPLACE: lowest trust, e.g. "unverified claim or external assertion"}}
 
 ## Creating New Workstations
 

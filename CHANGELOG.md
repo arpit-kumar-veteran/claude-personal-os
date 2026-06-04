@@ -2,6 +2,31 @@
 
 All notable changes to this pattern are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/). Version numbers follow [Semantic Versioning](https://semver.org/) loosely: major versions reflect substantial changes to the pattern, minor versions add capabilities, patch versions fix bugs in examples or documentation.
 
+## [0.2.0] - 2026-06-04
+
+### Added
+
+- `FIRST-WEEK.md`: day-by-day guide for the first seven days after setup. Covers confirming the install, running the first session close, setting up the weekly audit, and building the right habits before week two.
+- `INTEGRATIONS.md`: reference guide mapping external tools (Granola, Notion, Gmail, Figma, financial connectors) to the workstations they support. Includes a security note on MCP prompt injection risk.
+- `workstation-examples/`: seven filled-in workstation examples showing what a working CLAUDE.md and MEMORY.md look like after personalisation. Workstations included: career-hq, email-hq, brand-hq, meeting-hq, expense-hq, property-hq, learning-hq. Each has a fully written Identity, Workflow, and Editorial Rules section.
+- `skills/session-close.skill.md`: end-of-session skill for capturing changes, proposing memory updates, and emitting a compact session log. Does not write without approval.
+- `skills/voice-check.skill.md`: pre-publish skill that checks any text against the user's voice principles. Surfaces hard violations first, softer issues second, full rewrite only if violations exist.
+- `skills/memory-consolidation.skill.md`: quarterly cleanup skill for MEMORY.md files that have grown stale or over the line limit. Walks section by section, proposes merges, deletions, and relocations.
+- `skills/humanizer.skill.md`: post-draft skill that removes AI-writing patterns (em dashes, filler openers, AI vocabulary, passive voice, rule of three) from any text before it is sent or published.
+- `skills/scheduled-task.skill.md`: skill for designing and registering recurring automated tasks. Produces a task definition, a task prompt, and integration instructions. Includes stacking defaults for Friday and Monday cadences.
+- `skills/skills-index.md`: registry of all available skills with trigger conditions. Referenced from root CLAUDE.md so Claude checks it before starting any task.
+
+### Changed
+
+- `README.md`: rewritten with a problem-first hook, a before/after section, and an updated file tree reflecting all new additions. Removed the orphaned line "5. Run the audit. Iterate from there." that appeared mid-paragraph in v0.1.
+- `templates/CLAUDE.md.template`: five governance rules added to the Rules section: direct communication (no hedging), confidence-level sourcing, source transparency tagging, clean-replace on corrections, and source-of-truth hierarchy. A new Source-of-Truth Hierarchy section added with four ranked placeholder slots.
+- `setup/bootstrap.md` Phase 8: rewritten as a celebration close. Lists what was created, names three first things to try, points to FIRST-WEEK.md.
+- `METRICS.md`: rewritten as a progression story across week 1, week 4, and month 3. Each stage describes what the system feels like and what the structural metrics typically show.
+
+### Why this release
+
+v0.1 proved the pattern works. v0.2 makes it accessible to users who do not already know what "good" looks like. The seven workstation examples, the skills registry, and the first-week guide close the gap between "I have set this up" and "I know how to get value from it."
+
 ## [0.1.4] - 2026-05-24
 
 ### Fixed

@@ -118,20 +118,27 @@ After each file write, say:
 
 > Created `[path]`. It has `[brief description of what is in it]`.
 
-## Phase 8: Show and explain
+## Phase 8: Show and celebrate
 
 When all files are created, say:
 
-> Done. Your Personal Claude OS is at `[path]`.
+> Your Personal Claude OS is live at `[path]`.
 >
-> Here is how to use it from now on:
+> Here is what we just built together:
 >
-> 1. To start any session: open the folder in Claude Code and say "hi". I will read your CLAUDE.md and MEMORY.md and know who you are.
-> 2. To save something new: say "remember this" and tell me. I will propose where to save it and wait for your approval.
-> 3. To run the weekly audit: say "run the audit".
-> 4. To add another workstation: say "create a new workstation for [domain]".
+> - `CLAUDE.md`: your voice rules, preferences, and routing map. Claude reads this every session.
+> - `MEMORY.md`: your profile and what I know about you. This grows over time.
+> - `[list each workstation folder created]`: your first workstation(s). Each one has its own rules and memory.
 >
-> Want me to do a quick demo of any of these? Or shall we wrap here?
+> Three things you can do right now to feel this working:
+>
+> 1. Open your OS folder in Claude and say "hi". Watch Claude greet you by name and describe what it knows.
+> 2. Tell me something you want remembered. Say "remember [fact]". I will propose exactly where to save it and wait for your yes.
+> 3. Say "run the audit". I will check that everything is correctly structured and report back.
+>
+> Your first week guide is at `FIRST-WEEK.md` inside the repository you downloaded. It has a day-by-day plan.
+>
+> Want me to do a quick demo of any of these three things now? Or shall we close here?
 
 If the user wants a demo, do it. Use their actual files. Show, do not just describe.
 
