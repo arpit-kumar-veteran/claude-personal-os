@@ -7,118 +7,116 @@
 
 You use Claude every day. Every conversation starts from zero. Your context, your preferences, your history: gone. This fixes that.
 
+## Three steps to get started
+
+**1. Download this repo.**
+Click the green **Code** button above, then **Download ZIP**. Unzip it. You get a folder called `claude-personal-os-main`.
+
+**2. Open the folder in your Claude app.**
+- **Claude.ai (web or desktop):** drag the unzipped folder into a new conversation, or use *Add files* to attach it.
+- **Claude Code desktop:** File → Open Folder → pick `claude-personal-os-main`.
+- **Claude Code CLI:** `cd claude-personal-os-main` then `claude`.
+
+**3. Type: `start`**
+
+That is the entire entry point. One word. Claude takes it from there.
+
+---
+
+## What happens after you type "start"
+
+Claude walks you through a guided setup in about 30 minutes. Every response tells you what just happened, what comes next, and what to type to continue. You are never left guessing.
+
+The flow:
+
+1. **Welcome** — Claude shows you the full setup roadmap so you know what to expect.
+2. **File drop (optional)** — Share your LinkedIn PDF, resume, or any document about yourself. Claude reads it and skips questions it can answer from there.
+3. **Identity interview** — 5 short questions. Who you are, what you do, what you want this OS to help with most.
+4. **Voice and preferences** — 4 short questions. How you want Claude to write on your behalf, response length, words to avoid.
+5. **Workstation catalog** — Claude shows all 16 available workstations with a one-line description of each. Based on your interview answers, it marks 2-3 as "Recommended for you" and explains why. You pick 1-3 to start.
+6. **Cadence** — 3 questions. Weekly audit, session-close routine.
+7. **Build** — Claude creates your OS folder, fills in your files, and tells you exactly what it created and where.
+8. **Handoff** — You get a working personal OS, a first-week guide, and the three things to try right now.
+
+If you go off-topic during setup, Claude answers and brings you back. If you stop midway and return later, type `start` again — Claude will find where you left off and resume from there.
+
+---
+
+## What you end up with
+
+A folder on your computer that holds your personal AI operating system:
+
+- **`CLAUDE.md`** — your preferences, voice rules, and routing map. Claude reads this at the start of every session.
+- **`MEMORY.md`** — your profile and the facts Claude needs to remember about you. Grows over time.
+- **1-3 workstation folders** — domain-specific rules and memory for the areas you chose (job search, finance, health, etc.).
+- **A weekly audit routine** — run it by saying "run the audit". Claude checks that everything is correctly structured and reports back.
+
+No app installed. No cloud service. No database. The folder is yours. Move it, back it up, edit it by hand anytime.
+
+---
+
 ## The difference
 
-**Before this OS:** Claude is capable but context-blind. Every session you re-explain your role, your projects, your communication style. You get good answers, but always from a stranger.
+**Before:** Claude is capable but context-blind. Every session you re-explain your role, your projects, your communication style. You get good answers, always from a stranger.
 
-**After this OS:** Claude opens each session knowing your workstations, your voice rules, your open threads, and what you decided last week. It routes work correctly, proposes memory updates, audits itself weekly, and compounds over time.
+**After:** Claude opens each session knowing your workstations, your voice rules, and what you decided last week. It routes work correctly, proposes memory updates, audits itself weekly, and compounds over time.
 
-The system is Markdown files. No app, no cloud service, no subscription. The folder is yours.
-
-## What this is
-
-A set of Markdown templates, skills, prompts, workstation examples, and runnable scripts that describe how to organise Claude around your real working life. You clone the repo, run an interactive 30-minute setup, and end with a working personal AI operating system tuned to you. Zero personal information ships in this repository. All of it is yours to add.
+---
 
 ## Architecture
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the full design rationale and system diagram.
 
-In one paragraph: two tiers of memory (root plus per-workstation), strict file edit guards, a weekly scheduled audit, a skills registry for recurring patterns, and a voice principles layer that enforces tone. Workstations are folders. Governance is Markdown. The Python scripts consume the data the Markdown describes.
+In brief: two tiers of memory (root plus per-workstation), strict file edit guards, weekly scheduled audit, skills registry for recurring patterns, and a voice principles layer that enforces tone. Workstations are folders. Governance is Markdown.
+
+---
 
 ## What is in this repo
 
 ```
 .
+├── CLAUDE.md                          (auto-loaded: makes "start" work)
 ├── README.md                          (this file)
-├── 0-CLICK-HERE-TO-START.md           (non-coder entry point. Click this first.)
+├── 0-CLICK-HERE-TO-START.md           (non-coder guide: what to do after download)
 ├── FIRST-WEEK.md                      (day-by-day guide for your first 7 days)
 ├── WHAT-WEEK-12-LOOKS-LIKE.md         (what a mature deployment looks like at month 3)
 ├── INTEGRATIONS.md                    (which tools connect to which workstations)
-├── setup/                             (interactive bootstrap flow)
-│   ├── bootstrap.md                   (the master setup prompt Claude follows)
-│   ├── ingest.md                      (how Claude handles LinkedIn, resume, pitch deck)
-│   └── interview.md                   (the question reference)
+├── setup/
+│   ├── bootstrap.md                   (the guided setup flow Claude follows)
+│   ├── ingest.md                      (how Claude reads LinkedIn, resume, pitch deck)
+│   └── interview.md                   (full question reference)
 ├── GETTING-STARTED.md                 (manual install guide, for developers)
 ├── ARCHITECTURE.md                    (design overview + Mermaid diagram)
 ├── METRICS.md                         (what to expect at week 1, week 4, and month 3)
 ├── ROADMAP.md                         (current and planned versions)
 ├── CHANGELOG.md                       (release notes)
 ├── CONTRIBUTING.md                    (how to contribute)
-├── SETUP-SKILL.md                     (v0.2 design spec for the auto-installing skill)
 ├── LICENSE                            (MIT)
-├── templates/                         (root and workstation blank templates)
-│   ├── CLAUDE.md.template
-│   ├── MEMORY.md.template
-│   └── workstation/
-│       ├── CLAUDE.md.template
-│       └── MEMORY.md.template
+├── templates/                         (blank CLAUDE.md and MEMORY.md templates)
 ├── workstation-examples/              (16 filled-in workstation examples)
-│   ├── README.md
-│   ├── career-hq/                     (foundation)
-│   ├── email-hq/                      (foundation)
-│   ├── brand-hq/                      (foundation)
-│   ├── meeting-hq/                    (foundation)
-│   ├── expense-hq/                    (foundation)
-│   ├── property-hq/                   (foundation)
-│   ├── learning-hq/                   (foundation)
-│   ├── thinking-hq/
-│   ├── finances-hq/
-│   ├── health-hq/
-│   ├── consulting-hq/
-│   ├── venture-hq/
-│   ├── life-transition-hq/
-│   ├── intel-hq/
-│   ├── relationship-hq/
-│   └── content-hq/
 ├── skills/                            (10 registered skills)
-│   ├── skills-index.md                (registry: what exists, when to use it)
-│   ├── audit-system.skill.md
-│   ├── session-close.skill.md
-│   ├── voice-check.skill.md
-│   ├── memory-consolidation.skill.md
-│   ├── humanizer.skill.md
-│   ├── scheduled-task.skill.md
-│   ├── deep-research.skill.md
-│   ├── outreach.skill.md
-│   ├── workstation-create-full.skill.md
-│   └── content-repurpose.skill.md
-├── infrastructure/                    (ready-to-run templates)
-│   ├── ARCHIVE.md.template
-│   ├── auto-memory-system.md
-│   └── scheduled-tasks/
-│       ├── weekly-audit.task.md
-│       ├── weekly-memory-review.task.md
-│       └── monthly-close.task.md
-├── prompts/                           (5 reusable prompts + README)
-├── docs/decisions/                    (8 Architecture Decision Records + index)
-├── scripts/                           (2 runnable example scripts + sample data)
-├── screenshots/                       (architecture diagram source + render)
-└── case-studies/
-    ├── README.md
-    └── early-adopter-template.md      (template for documenting a real deployment)
+├── infrastructure/                    (scheduled task templates and archive system)
+├── prompts/                           (5 reusable prompts)
+├── docs/decisions/                    (Architecture Decision Records)
+├── scripts/                           (example Python scripts)
+└── case-studies/                      (early-adopter deployment template)
 ```
 
-## How to set up
+---
 
-Two paths. Same destination.
+## Manual setup (developers only)
 
-**Recommended for everyone.** Download this repo (green Code button, then Download ZIP, or `git clone`), then open [0-CLICK-HERE-TO-START.md](0-CLICK-HERE-TO-START.md). It walks you through picking a Claude app, opening the folder, and pasting one line. Claude interviews you, reads your LinkedIn or resume if you share it, and creates your personalised OS folder. About 30 minutes.
+If you want full control over the file structure without the guided flow, read [GETTING-STARTED.md](GETTING-STARTED.md). Copy templates by hand, replace `{{REPLACE: ...}}` markers yourself, build your routing map directly.
 
-**For developers who want manual control.** Read [GETTING-STARTED.md](GETTING-STARTED.md). Copy templates by hand, replace `{{REPLACE: ...}}` markers yourself, build your routing map directly.
-
-After setup: read [FIRST-WEEK.md](FIRST-WEEK.md) for a day-by-day guide to getting value in the first 7 days.
-
-## What it does not do
-
-- It does not install an app or run a server. It creates a folder of files.
-- It does not guarantee productivity gains. It guarantees that Claude knows who you are and how you work. What you do with that is up to you.
-- It does not manage itself. You run the weekly audit. You close sessions. You decide what gets remembered. The system enforces your rules; you still make the rules.
+---
 
 ## Credits
 
-Designed and built by **Arpit Kumar**, Commander Indian Navy (Retd), 15.5 years across naval engineering, operations leadership, and IT program management. This repository is one artefact from a longer project to run a personal life and work on a Claude-based system. The pattern is what travels. Everything personal stays private.
+Designed and built by **Arpit Kumar**, Commander Indian Navy (Retd), 15.5 years across naval engineering, operations leadership, and IT program management.
 
 LinkedIn: [https://www.linkedin.com/in/arpit-kumar-veteran](https://www.linkedin.com/in/arpit-kumar-veteran)
+
+---
 
 ## License
 

@@ -1,172 +1,377 @@
-# Bootstrap: Personal Claude OS interactive setup
+# Bootstrap: Personal Claude OS guided setup
 
-This is the master instruction file. When the user pastes a line like "Follow setup/bootstrap.md and walk me through setting up my own Personal Claude OS step by step," you (Claude) follow these phases in order.
+This is the master instruction file for the setup flow. When the user types "start", follow these phases in order, without skipping any.
 
-## Operating principles for this entire flow
+The rules governing this entire session are in the root `CLAUDE.md`. Read it before beginning. Key points:
+- One question at a time. Always.
+- Every response ends with a trigger word (**continue** by default).
+- Every phase ends with a summary block before the next phase begins.
+- If the user goes off-topic, answer briefly, then re-anchor with "Back to setup: [phase, question, restate]."
+- Track which phase and question you are on. If the user returns after a break, tell them exactly where they left off.
 
-- Ask ONE question at a time. Wait for the answer. Never list five questions in one message.
-- Use plain language. Assume the user has zero technical background.
-- Confirm important decisions before writing files. "I am about to create a folder at `~/personal-claude-os/`. Sound good?"
-- After every file write, tell the user exactly what changed. "I just created `~/personal-claude-os/CLAUDE.md` with your preferences."
-- Never use jargon without explaining it the first time you use it.
-- If the user seems lost, slow down, summarise where you are, ask if they want to continue or pause.
-- Never write to any file outside the user's chosen OS folder.
-- Never edit files in this template repository itself.
+---
 
-## Phase 1: Welcome and orient
+## Phase 1: Welcome and roadmap
 
-Say (adapt to the user's tone, but keep this shape):
+Say exactly this (adapt tone slightly to match the user, but keep this structure):
 
-> Hi. I am going to set up your Personal Claude OS over the next 20 to 30 minutes. Here is what is going to happen:
+> Hi. I am Claude, and I am going to set up your Personal Claude OS over the next 30 minutes.
 >
-> 1. I will offer you a chance to share files (LinkedIn, resume, pitch deck) so I can pre-fill some answers.
-> 2. I will ask 15 to 25 short questions about you, your work, and how you want this system to behave. One question at a time.
-> 3. I will suggest a name and location for your OS folder. You confirm or change.
-> 4. I will create the folder and write your personalised files into it. I will tell you exactly what got written and where.
-> 5. I will show you how to use the system from now on.
+> Before the first question, here is the full picture of what we are doing together — so you know exactly where we are headed at every step:
 >
-> You can pause any time. Just tell me. I will save your progress and resume where we left off when you come back.
+> **Phase 1 — Welcome (now):** I show you the roadmap. You know what is coming before we start.
 >
-> Ready to start?
+> **Phase 2 — File drop (optional, 2-5 min):** You can share your LinkedIn PDF, resume, or any document that describes you. I read it and use it to pre-fill answers, so you type less.
+>
+> **Phase 3 — Identity (5 questions, ~5 min):** I learn who you are, what you do, and what you want this OS to help you with most.
+>
+> **Phase 4 — Voice and preferences (4 questions, ~3 min):** I learn how you want me to write on your behalf, and what to avoid.
+>
+> **Phase 5 — Workstation selection (~5 min):** I show you all 16 available workstations — domains of your life I can help you manage. Based on what you told me in Phases 3 and 4, I recommend 2 to 3. You pick 1 to 3 to install.
+>
+> **Phase 6 — Cadence (3 questions, ~2 min):** I set up a weekly audit and a session-close routine.
+>
+> **Phase 7 — Build (~5 min):** I create your OS folder, fill in your files, and tell you exactly what was created and where.
+>
+> **Phase 8 — Handoff:** Your OS is live. I show you what was built and give you three things to try immediately.
+>
+> A few things to know before we start:
+> - I will ask one question at a time. Answer in plain English. No right or wrong answers.
+> - At the end of every phase I will summarise what was captured and tell you what comes next.
+> - At the end of every response you will see a trigger word — usually **continue**. Type it to move forward. You never have to guess what to say next.
+> - You can pause any time. If you stop and come back later, type **start** again. I will find your progress and resume from where you left off.
+> - If you want to ask me something in the middle of setup, go ahead. I will answer and then bring us back to where we were.
+>
+> Ready?
+>
+> → Type **continue** when you are ready to begin.
 
-WAIT for confirmation. If they want more context, give it. Do not proceed until they say yes.
+WAIT. Do not proceed until the user responds. If they ask questions, answer them. Then re-anchor with the trigger.
+
+---
 
 ## Phase 2: File ingestion
 
 Say:
 
-> Before the questions, do you have any of these files? It will save typing.
+> Before the questions, do you have any of these?
 >
-> - LinkedIn profile (PDF export from LinkedIn, or paste the URL)
+> - LinkedIn profile (PDF export from LinkedIn, or paste your LinkedIn URL)
 > - Resume or CV (PDF or Word)
-> - Pitch deck or one-pager about you or your work
-> - Voice guide or style document you have written for yourself
-> - Anything else that describes who you are or how you work
+> - Pitch deck or bio that describes your work
+> - A voice guide or writing style document you use
+> - Anything else that describes who you are
 >
-> Drag and drop into this chat now, or paste a URL. If you have nothing, just say "skip" and we will go through the questions.
+> Drag and drop files into this chat now, or paste a URL. If you have nothing ready, just type **skip** and we move straight to the questions.
 
-WAIT. If files arrive, follow `setup/ingest.md` to read them. Tell the user what you extracted in plain language:
+WAIT. If files arrive, follow `setup/ingest.md` to read them. Then say:
 
-> I read your LinkedIn. I see you are a [role] at [company], with [X] years in [field], based in [city]. I will use this to pre-fill some of the upcoming questions, and you can correct anything that is wrong.
-
-Save extracted facts to `setup/answers.md` as you go (this file is gitignored).
-
-## Phase 3: Identity (5 questions)
-
-Ask one at a time. Pre-fill from ingested files where possible. For pre-filled answers, present the value and ask "does this look right, or do you want to change it?".
-
-1. What name should I use for you?
-2. What is your primary role, or what do you spend most of your work time on?
-3. What is the single biggest thing you want this OS to help you with?
-4. Write me 2-3 sentences about yourself that a future Claude session should know. (Or say "use what you read from my files".)
-5. Where on your computer should I create your OS folder? Suggest a default: `~/personal-claude-os/` on Mac or Linux, `C:\personal-claude-os\` on Windows. Confirm or change.
-
-## Phase 4: Voice and preferences (4 questions)
-
-1. How do you want me to write when I write on your behalf? Examples: professional, conversational, blunt, formal. Or describe in your own words.
-2. How long should my responses be by default? Short (under 100 words), Medium (100-300 words), or Long (no limit).
-3. Any words or phrases I should never use? Examples: jargon you dislike, common marketing-deck words, emojis, exclamation marks.
-4. If you already have a voice guide file, point me at it. Otherwise skip.
-
-## Phase 5: Workstations
-
-Say:
-
-> A workstation is one domain of your life that I help you manage. Common examples: career or job search, personal finance, health, meetings and notes, contacts, property, household operations. Each workstation is a folder with two files. You can have anywhere from 1 to 10. Most people start with 1 to 3 and add more once they get comfortable.
+> I read your [document name]. Here is what I found:
+> - [Name / role / company / years of experience / location — pull what is there]
+> I will use this to pre-fill some of the upcoming questions. You can correct anything that looks wrong.
 >
-> Which 1 to 3 domains do you want to start with?
+> → Type **continue** to start the questions.
+
+Save all extracted facts to `setup/answers.md` (this file is gitignored — it never leaves the user's machine).
+
+If they skipped, say:
+
+> No problem. We will go through everything in the questions.
+>
+> → Type **continue** to start.
+
+---
+
+## Phase 3: Identity — 5 questions
+
+Say before the first question:
+
+> **Phase 3 of 8 — Identity**
+> 5 short questions. I am learning who you are and what you want this OS to help you with.
+
+Then ask one question at a time. If you pre-filled an answer from ingested files, present the value and ask "Does this look right, or do you want to change it?"
+
+**Question 3.1:**
+> What name should I use for you?
+
+**Question 3.2:**
+> What is your primary role, or what do you spend most of your work time doing?
+
+**Question 3.3:**
+> What is the single biggest thing you want this OS to help you with?
+
+**Question 3.4:**
+> Write me 2 to 3 sentences about yourself that a future Claude session should know — your background, what you are working on, what matters to you. (Or say "use what you read from my files".)
+
+**Question 3.5:**
+> Where on your computer should I create your OS folder? I suggest `~/personal-claude-os/` on Mac or Linux, or `C:\personal-claude-os\` on Windows. You can change the name and location — just tell me where.
+
+After all five answers are collected, emit the phase-end summary:
+
+> ✓ **Phase 3 complete — here is what I captured:**
+> - Name: [answer]
+> - Role: [answer]
+> - Primary goal for this OS: [answer]
+> - About you: [answer]
+> - OS folder location: [answer]
+>
+> **Next up — Phase 4:** 4 quick questions about how you want me to communicate on your behalf. Voice, length, things to avoid.
+>
+> → Type **continue** when ready.
 
 WAIT.
 
-For each workstation chosen, ask:
+---
 
-A. What does this workstation cover? One paragraph. What goes in, what does not go in.
-B. What is the main task you want help with in this workstation?
-C. Any files, links, or resources I should know about for this workstation? Skip if none.
+## Phase 4: Voice and preferences — 4 questions
 
-## Phase 6: Cadence (3 questions)
+Say before the first question:
 
-1. Do you want a weekly automated audit that checks for drift in your OS? Recommend: yes.
-2. What day and time should the audit run? Suggest: Friday at 10:00.
-3. Do you want a session-close routine at the end of each working session? It reviews what changed, proposes memory updates, and lists open threads. Recommend: yes.
+> **Phase 4 of 8 — Voice and preferences**
+> 4 questions. I am learning how you want me to write when I write on your behalf.
+
+Ask one at a time.
+
+**Question 4.1:**
+> How do you want me to write when I draft emails, messages, or documents for you? Examples: professional, conversational, blunt, formal, warm. Or describe it in your own words.
+
+**Question 4.2:**
+> How long should my responses be by default? Options:
+> - Short (under 100 words — quick answers, no elaboration)
+> - Medium (100 to 300 words — the default for most people)
+> - Long (no limit — full detail every time)
+
+**Question 4.3:**
+> Any words, phrases, or habits I should never use? For example: jargon you dislike, filler phrases like "certainly" or "great question", emojis, exclamation marks. Type "none" if you have no restrictions.
+
+**Question 4.4:**
+> Do you already have a voice guide or writing style document? If yes, tell me where the file is and I will reference it. If not, type "no" and I will build voice rules from your answers here.
+
+After all four answers, emit the phase-end summary:
+
+> ✓ **Phase 4 complete — here is what I captured:**
+> - Tone: [answer]
+> - Default response length: [answer]
+> - Words or phrases to avoid: [answer]
+> - Voice guide: [yes/no and path if yes]
+>
+> **Next up — Phase 5:** The workstation catalog. I will show you all 16 available workstations and recommend which ones fit you based on what you just told me.
+>
+> → Type **continue** when ready.
+
+WAIT.
+
+---
+
+## Phase 5: Workstation selection
+
+Say before the catalog:
+
+> **Phase 5 of 8 — Workstation selection**
+>
+> A workstation is one domain of your life that I help you manage — job search, personal finance, health, meetings, contacts. Each workstation is a folder with its own rules and memory. You can start with 1 to 3 and add more any time.
+>
+> Here are all 16 available workstations. I have marked the ones I recommend for you based on what you told me.
+
+Then present the catalog. Use the interview answers from Phases 3 and 4 to determine which 2 to 3 to mark as recommended. Add a one-line "Why for you:" under each recommended one.
+
+> ### Foundation workstations
+> These seven cover the most common needs for any professional.
+>
+> | Workstation | What it covers |
+> |---|---|
+> | **career-hq** | Resume, cover letters, job applications, interview prep, outreach to employers and contacts |
+> | **email-hq** | Email drafting, reply tone-matching, thread discipline, avoiding inbox overwhelm |
+> | **brand-hq** | LinkedIn positioning, content creation, public identity — how you show up professionally online |
+> | **meeting-hq** | Meeting notes, transcript capture, action item extraction, follow-up tracking |
+> | **expense-hq** | Monthly burn tracking, bank and card reconciliation, spending category taxonomy |
+> | **property-hq** | Property or asset management, maintenance tracking, cost records, tenant or rental admin |
+> | **learning-hq** | Courses, books, skill development, personal knowledge capture |
+>
+> ### Advanced workstations
+> Add these when a domain keeps coming up in sessions and Claude keeps losing context.
+>
+> | Workstation | What it covers |
+> |---|---|
+> | **thinking-hq** | Structured reasoning: coach mode, strategist mode, devil's advocate, big decisions |
+> | **finances-hq** | Net worth, investments, FIRE planning, asset allocation, financial source-of-truth |
+> | **health-hq** | Family health tracking, lab results, supplements, conditions — one folder for everyone |
+> | **consulting-hq** | Freelance pipeline, proposals, client deliverables, billing and invoicing |
+> | **venture-hq** | Side business or startup: co-founder search, market intel, investor conversations |
+> | **life-transition-hq** | Relocation, career pivots, major decisions with long horizons and low reversibility |
+> | **intel-hq** | Recurring newsletter and digest processing: extract signals, discard noise, route to right places |
+> | **relationship-hq** | Personal CRM, network hygiene, follow-up cadence, conversation prep |
+> | **content-hq** | Content pipeline: writing, repurposing, scheduling, cross-platform publishing |
+>
+> ---
+> Based on what you told me, I recommend:
+>
+> ⭐ **[Recommended workstation 1]** — [one-sentence reason drawn from their interview answers]
+> ⭐ **[Recommended workstation 2]** — [one-sentence reason]
+> ⭐ **[Recommended workstation 3 if applicable]** — [one-sentence reason]
+>
+> Which 1 to 3 do you want to install? You can pick from my recommendations, choose others from the list, or mix. Just name them.
+
+WAIT for the user's selection.
+
+Once they confirm their selection, for each chosen workstation ask:
+
+> For **[workstation name]**:
+> Is there anything specific I should know about how you want to use this workstation — any files, links, tools, or rules I should build in from the start? Or say "use defaults" and I will set it up from the template.
+
+After all workstation details are collected, emit the phase-end summary:
+
+> ✓ **Phase 5 complete — here is what I captured:**
+> - Workstations to install: [list]
+> - Custom details: [summary per workstation, or "defaults" if they skipped]
+>
+> **Next up — Phase 6:** 3 short questions about your weekly rhythm — an automated audit and a session-close routine.
+>
+> → Type **continue** when ready.
+
+WAIT.
+
+---
+
+## Phase 6: Cadence — 3 questions
+
+Say before the first question:
+
+> **Phase 6 of 8 — Cadence**
+> 3 quick questions to set up your recurring routines.
+
+**Question 6.1:**
+> Do you want a weekly automated audit? It checks your OS for drift — missing memory entries, stale routing, uncaptured decisions — and proposes fixes. Takes about 5 minutes once a week. Recommended: yes.
+
+**Question 6.2 (ask only if yes):**
+> What day and time should the audit run? Default: Friday at 10:00 am. Change if you prefer.
+
+**Question 6.3:**
+> Do you want a session-close routine at the end of each working session? It reviews what changed during the session, proposes memory updates, and lists any open threads you should not forget. Recommended: yes.
+
+After all answers, emit the phase-end summary:
+
+> ✓ **Phase 6 complete — here is what I captured:**
+> - Weekly audit: [on/off, day and time if on]
+> - Session-close routine: [on/off]
+>
+> **Next up — Phase 7:** The build. I am going to create your OS folder and write all your files. I will show you exactly what I am about to create and wait for your yes before writing anything.
+>
+> → Type **continue** when ready.
+
+WAIT.
+
+---
 
 ## Phase 7: Confirm and create
 
-Before writing anything, summarise:
+Before writing a single file, emit the full confirmation:
 
-> Here is what I am about to create for you:
+> **Phase 7 of 8 — Build**
 >
-> - A new folder at `[path]`.
-> - A root `CLAUDE.md` with your voice, preferences, and routing map.
-> - A root `MEMORY.md` with your profile and what I learned from your files.
-> - `[N]` workstation folder(s) for `[list of workstation names]`, each with their own CLAUDE.md and MEMORY.md.
-> - A weekly audit reminder.
+> Here is exactly what I am about to create for you:
 >
-> Should I create all of this now?
+> 📁 **New folder at:** `[path]`
+>
+> Inside it:
+> - `CLAUDE.md` — your voice rules, preferences, routing map, and the [N] governance rules that protect your memory files.
+> - `MEMORY.md` — your profile and everything I learned from our conversation today.
+> - `[workstation-name]/` — [one-line description], with its own CLAUDE.md and MEMORY.md.
+> - [repeat per workstation]
+> - `skills/audit-system.skill.md` — the weekly audit routine, ready to run.
+>
+> Nothing is written until you say yes. Do you want me to create all of this now?
 
 WAIT for explicit yes.
 
-Then create the files in this order:
+Then create files in this order:
 
 1. The OS root folder.
-2. Root `CLAUDE.md` (filled in from templates/CLAUDE.md.template).
-3. Root `MEMORY.md` (filled in from templates/MEMORY.md.template).
-4. For each workstation: the folder, the workstation CLAUDE.md, the workstation MEMORY.md.
-5. Optional: copy `skills/audit-system.skill.md` into the new folder with `{{PATH_TO_OS_ROOT}}` replaced.
+2. Root `CLAUDE.md` — filled in from `templates/CLAUDE.md.template` with all answers from Phases 3-6.
+3. Root `MEMORY.md` — filled in from `templates/MEMORY.md.template` with identity and profile.
+4. For each workstation: the folder, then `CLAUDE.md` (from `workstation-examples/[name]/CLAUDE.md`), then `MEMORY.md` (from `workstation-examples/[name]/MEMORY.md`). Replace example content with the user's specifics where they provided them. Keep template defaults where they said "use defaults."
+5. Copy `skills/audit-system.skill.md` into `[os-root]/skills/` and replace `{{PATH_TO_OS_ROOT}}` with the actual path.
 
-After each file write, say:
+After creating each file, say:
 
-> Created `[path]`. It has `[brief description of what is in it]`.
+> ✓ Created `[path]` — [one-line description of what is inside].
 
-## Phase 8: Show and celebrate
+After all files are written, emit:
 
-When all files are created, say:
+> ✓ **Phase 7 complete — build done.**
+>
+> **Next up — Phase 8:** I show you what we just built and give you three things to try immediately.
+>
+> → Type **continue** when ready.
 
+WAIT.
+
+---
+
+## Phase 8: Handoff
+
+Say:
+
+> **Phase 8 of 8 — Handoff**
+>
 > Your Personal Claude OS is live at `[path]`.
 >
-> Here is what we just built together:
+> Here is what we built together:
 >
-> - `CLAUDE.md`: your voice rules, preferences, and routing map. Claude reads this every session.
-> - `MEMORY.md`: your profile and what I know about you. This grows over time.
-> - `[list each workstation folder created]`: your first workstation(s). Each one has its own rules and memory.
+> - **`CLAUDE.md`** — Your voice, preferences, [N] governance rules, and routing map. Claude reads this at the start of every session.
+> - **`MEMORY.md`** — Your profile and what Claude knows about you. This grows session by session as you say "remember this."
+> - [For each workstation: **`[name]/`** — [one-line description of what was set up]]
+> - **`skills/audit-system.skill.md`** — Run it any time by saying "run the audit."
 >
-> Three things you can do right now to feel this working:
+> **Three things to try right now:**
 >
-> 1. Open your OS folder in Claude and say "hi". Watch Claude greet you by name and describe what it knows.
-> 2. Tell me something you want remembered. Say "remember [fact]". I will propose exactly where to save it and wait for your yes.
-> 3. Say "run the audit". I will check that everything is correctly structured and report back.
+> 1. Open your OS folder in Claude and say **"hi"**. Claude will greet you by name, describe what it knows about you, and ask what you want to work on.
+> 2. Tell Claude something you want remembered. Say **"remember [fact]"**. It will propose exactly where to save it and wait for your approval before writing.
+> 3. Say **"run the audit"**. Claude will check that your OS is correctly structured and report back in about 2 minutes.
 >
-> Your first week guide is at `FIRST-WEEK.md` inside the repository you downloaded. It has a day-by-day plan.
+> Your first-week guide is at `FIRST-WEEK.md` in the repository you downloaded. It has a day-by-day plan for the first 7 days.
 >
-> Want me to do a quick demo of any of these three things now? Or shall we close here?
+> Want me to do a quick demo of any of these three things now, using your actual files?
 
-If the user wants a demo, do it. Use their actual files. Show, do not just describe.
+WAIT. If they want a demo, do it with their real data. If they are done, proceed to Phase 9.
+
+---
 
 ## Phase 9: Save and exit
 
-Whether they wanted a demo or not, before closing, save a setup log to `[their-folder]/setup-log.md` with:
+Write a setup log to `[their-os-folder]/setup-log.md` with:
 
 - Date and time of setup
-- Files ingested (filenames only, never their contents)
-- Decisions made (workstations, cadence, voice rules)
+- Files ingested (filenames only — never their contents)
+- Decisions made: name, role, goal, voice rules, workstations chosen, cadence
 - Path to the new OS folder
 
-Print the path one more time so they have it for next time. Done.
+Then say:
 
-## Recovery: resuming a paused setup
+> Your setup log is saved at `[their-os-folder]/setup-log.md`.
+>
+> Your OS is at `[path]`. Next time you work, open that folder in Claude — not this one — and say "hi."
+>
+> You are done. Welcome to your Personal Claude OS.
 
-If the user pauses mid-flow and comes back later in a new session, they can paste:
+---
 
-> Resume my Personal Claude OS setup. Read setup/answers.md if it exists and tell me where we left off.
+## Recovery: resuming an interrupted setup
 
-You should:
+If the user returns after stopping mid-setup and types **start**:
 
-1. Read `setup/answers.md` to see what is already captured.
-2. Tell the user the current state. "You answered through Phase 4. We were about to start Phase 5 (workstations)."
-3. Continue from the next unanswered question.
+1. Check whether `setup/answers.md` exists and read it.
+2. If it does, say: "Welcome back. You got as far as [phase name], question [N]. Here is what I captured so far: [summary]. Ready to continue from [next question]?"
+3. Continue from the next unanswered question with the standard trigger-word format.
 
-## Notes
+If `setup/answers.md` does not exist, begin from Phase 1 and explain that no saved progress was found.
 
-- `setup/answers.md` is gitignored. It never gets committed.
-- The user owns every file you create. They can edit anything by hand at any time.
-- If at any point the user asks you to do something this bootstrap does not cover, defer to them. Do not invent steps.
+---
+
+## Notes for Claude
+
+- `setup/answers.md` is gitignored. It is never committed to the repository.
+- Never modify files in the `claude-personal-os` repo folder. All writes go to the user's OS folder.
+- The user owns every file created. They can edit anything by hand at any time.
+- If the user asks you to do something not covered by this bootstrap, defer to them. Do not invent phases.
+- The workstation examples in `workstation-examples/` are the source templates. Read the relevant one before writing a workstation's files.

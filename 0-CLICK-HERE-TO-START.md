@@ -1,123 +1,79 @@
 # Start Here
 
-You just downloaded Personal Claude OS. This file walks you through setting up your own copy in about 30 minutes. You do not need to be a coder. You will not type a single line of code.
+You downloaded Personal Claude OS. Three steps.
 
-## What you need first
+---
 
-1. **A Claude desktop app installed.** See "Pick your Claude app" below for the three options.
-2. **This folder on your computer.** If you used `git clone`, you already have it. If you don't know what git is, see "Two ways to download this" below.
-3. **30 to 45 minutes of quiet time.** You can pause and resume any time.
+## Step 1: Open this folder in your Claude app
 
-That's the whole list. No Python required. No GitHub account required.
+You need a Claude app. If you do not have one, go to `claude.com` and download the desktop app (look for Claude Cowork — it is the easiest). Sign in, then come back here.
 
-## Pick your Claude app
+Once you have the app:
 
-There are three ways to talk to Claude on your computer. Pick the one that matches your comfort level.
+- **Claude.ai (web or desktop app):** Open a new conversation. Drag this folder into the chat window, or click the attachment icon and add it. You should see the files appear.
+- **Claude Code desktop:** Open the app. Go to File → Open Folder. Pick the `claude-personal-os-main` folder you unzipped.
+- **Claude Code CLI (developers only):** Open your terminal. Navigate into this folder (`cd claude-personal-os-main`) and run `claude`.
 
-### Option 1 (Recommended for everyone): Claude Cowork desktop app
+You will know it worked when Claude is active and ready to chat, with this folder as context.
 
-**Best for:** non-coders, first-time users, anyone who wants the smoothest experience.
+---
 
-Claude Cowork is the app Anthropic built specifically for people doing real work who are not writing code. It has the friendliest interface, the cleanest file handling, and the best support for the skills and plugins this OS uses.
+## Step 2: Type `start`
 
-If you don't have it installed yet, download from `claude.com` and pick the Cowork desktop app. Install, sign in, and you are ready.
+In the chat box, type the word `start` and press Enter. Nothing else. Just that word.
 
-This is the recommended path. The rest of this guide assumes you are using Cowork unless you tell Claude otherwise.
+Claude will take it from here.
 
-### Option 2: Claude Code desktop app
+---
 
-**Best for:** people who already have Claude Code installed for other work, or who prefer its slightly more developer-oriented interface.
+## Step 3: Follow Claude's lead
 
-Claude Code is also a desktop app. It originated for software development but works for any task. The setup flow works the same way.
+Claude will guide you through the entire setup. Here is what to expect:
 
-If you don't have it installed yet, download from `claude.com/code`.
+- **Every response tells you what just happened** — what was captured, what was created.
+- **Every response tells you what comes next** — the next phase, how many questions.
+- **Every response ends with a trigger word** — usually **continue**. Type it to move forward. You will never be left wondering what to type.
+- **If you go off-track** — ask a question, share something, go on a tangent — Claude will answer and then bring you back with a clear "Back to setup: [where we are]."
+- **If you stop midway** — close the app, come back tomorrow — type `start` again. Claude will find your progress and resume from where you left off.
 
-### Option 3 (Developer only): Claude Code CLI
+The setup takes about 30 minutes. You can pause at any point.
 
-**Not recommended for non-technical users.** This option requires you to be comfortable with the terminal and basic command-line work.
+---
 
-The Claude Code CLI runs in your terminal. You install it via `npm install -g @anthropic-ai/claude-code` (you need Node.js installed first), then run `claude` inside the folder.
+## What the setup covers
 
-If you are not sure what any of the above sentence means, skip this option entirely and use Option 1 or Option 2. There is no functional difference in the end result.
+Claude walks you through these phases, one at a time:
 
-## Two ways to download this folder
+| Phase | What happens | Time |
+|---|---|---|
+| 1. Welcome | Full roadmap shown upfront. You know the whole journey before step one. | 1 min |
+| 2. File drop | Share your LinkedIn PDF, resume, or any doc. Claude reads it and skips questions it can already answer. Optional. | 2-5 min |
+| 3. Identity | 5 questions. Your name, role, what you want this OS to help with most. | 5 min |
+| 4. Voice | 4 questions. How you want Claude to write on your behalf, response style, things to avoid. | 3 min |
+| 5. Workstations | Claude shows all 16 available workstations with descriptions. Recommends 2-3 based on your answers. You pick which to install. | 5 min |
+| 6. Cadence | 3 questions. Weekly audit, session-close routine. | 2 min |
+| 7. Build | Claude creates your OS folder, fills in your files. Tells you exactly what was created. | 5 min |
+| 8. Handoff | What was built, how to use it from now on, three things to try immediately. | 2 min |
 
-Both options below give you the same folder. Pick whichever feels easier.
-
-### Easy way (no git knowledge needed)
-
-1. Go to `https://github.com/arpit-kumar-veteran/claude-personal-os`
-2. Click the green **Code** button near the top right of the file list.
-3. Click **Download ZIP**.
-4. Unzip the downloaded file. You will get a folder called `claude-personal-os-main` (or similar).
-5. Move that folder somewhere you can find again. `~/Documents/` works fine.
-
-### Developer way (if you already know git)
-
-```
-git clone https://github.com/arpit-kumar-veteran/claude-personal-os.git
-```
-
-## The three steps
-
-### Step 1: Open this folder in your Claude app
-
-The mechanics are slightly different per app, but the idea is the same: tell your Claude app that you want to work inside the folder you just downloaded.
-
-- **In Claude Cowork:** open the app, then point it at the folder you downloaded. Cowork will read the files in the folder so it knows the context.
-- **In Claude Code desktop:** launch the app. From the top menu choose **File** > **Open Folder**. Pick the folder you downloaded (`claude-personal-os-main` or `claude-personal-os`).
-- **In Claude Code CLI:** in your terminal, `cd` into the folder and run `claude`.
-
-You should see a list of files in the app. If you see `README.md`, `0-CLICK-HERE-TO-START.md` (this file), and a few folders, you are in the right place.
-
-### Step 2: Paste this single line
-
-In the chat box, paste this exactly:
-
-> Follow setup/bootstrap.md and walk me through setting up my own Personal Claude OS step by step.
-
-Press enter.
-
-### Step 3: Answer Claude's questions
-
-Claude will now:
-
-1. Introduce itself and explain what's about to happen.
-2. Offer you a chance to share files (LinkedIn PDF, resume, pitch deck, voice guide, anything that describes you or your work). You can drag and drop them into the chat. Claude will read them and use what it finds to skip questions later.
-3. Ask you 15 to 25 short questions, one at a time. Plain English. You answer in the chat.
-4. Suggest a name and location for your personal OS folder.
-5. Show you exactly what it's about to create. You approve before anything is written.
-6. Create the folder, fill in the templates with your answers, set up your first workstation.
-7. Tell you exactly what was created, where, and how to use it from now on.
-
-You can stop at any point and resume later. Tell Claude you want to pause. It will save where you are.
+---
 
 ## What you end up with
 
-A new folder somewhere on your computer (you pick where) that holds your personal AI operating system. Inside it:
+A folder on your computer — you choose where — that contains your personal AI operating system:
 
-- A `CLAUDE.md` file with your preferences, voice rules, and routing map. Yours, editable any time.
-- A `MEMORY.md` file with your profile and the facts Claude needs to remember about you.
-- One starter workstation folder for the first domain you chose to set up (job search, finance, meetings, whatever you picked).
-- A weekly audit you can run by asking Claude "run the audit".
+- **`CLAUDE.md`** — your voice, preferences, and routing map. Claude reads this at the start of every session.
+- **`MEMORY.md`** — your profile and the facts Claude remembers about you. Grows session by session.
+- **1-3 workstation folders** — rules and memory for the domains you chose (job search, finance, health, meetings, etc.).
+- **A weekly audit** — say "run the audit" any time. Claude checks that everything is correctly structured and reports back.
 
-That's it. No application installed, no cloud service, no database. The folder is yours. You can move it, edit it, back it up, or delete it with no special tools.
+The folder belongs to you. No cloud service, no subscription, no app required to use it. Edit files directly anytime, or ask Claude to edit on your behalf (it will always show you what it intends to change and wait for a yes).
 
-## If something goes wrong
+---
 
-Tell Claude exactly what you saw on screen and what you expected. Claude will diagnose. If you cannot proceed, take a screenshot and open an issue at `https://github.com/arpit-kumar-veteran/claude-personal-os/issues`. Paste the screenshot and what happened. Someone will respond.
+## If something is not working
 
-## What to do after setup
+Tell Claude exactly what you saw and what you expected. Claude will diagnose. If you cannot get past Step 1, open an issue at `https://github.com/arpit-kumar-veteran/claude-personal-os/issues` and paste a screenshot of what you are seeing.
 
-The first time you open your new OS folder in your Claude app, just say "hi". Claude will read your CLAUDE.md and MEMORY.md and know who you are. From there:
+---
 
-- To save a fact: say "remember this" and tell Claude. It will propose where to save it and wait for your approval.
-- To run the weekly audit: say "run the audit".
-- To add another workstation: say "create a new workstation for [domain]".
-- To work in a specific workstation: say "I'm working on [domain]" and start.
-
-## What this is not
-
-This is not a chatbot. This is a folder of files that Claude reads to understand who you are and how you want to work. The files belong to you. You can edit them by hand any time, or ask Claude to edit them on your behalf (it will always ask first). The system is yours.
-
-When you're ready, do Step 1.
+When you are ready, do Step 1. Then type `start`.
