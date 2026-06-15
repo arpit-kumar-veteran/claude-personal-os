@@ -17,6 +17,8 @@ Say exactly this (adapt tone slightly to match the user, but keep this structure
 
 > Hi. I am Claude, and I am going to set up your Personal Claude OS over the next 30 minutes.
 >
+> **What is a Personal AI OS?** It is a folder on your computer that tells Claude who you are, how you work, and what you are working on. Instead of starting every conversation from zero, Claude reads your files at the start of each session and already knows your context, your rules, and your open threads. The folder is your operating system. It lives on your machine, not in any cloud service, and it belongs entirely to you.
+>
 > Before the first question, here is the full picture of what we are doing together — so you know exactly where we are headed at every step:
 >
 > **Phase 1 — Welcome (now):** I show you the roadmap. You know what is coming before we start.
@@ -103,8 +105,46 @@ Then ask one question at a time. If you pre-filled an answer from ingested files
 **Question 3.4:**
 > Write me 2 to 3 sentences about yourself that a future Claude session should know — your background, what you are working on, what matters to you. (Or say "use what you read from my files".)
 
-**Question 3.5:**
-> Where on your computer should I create your OS folder? I suggest `~/personal-claude-os/` on Mac or Linux, or `C:\personal-claude-os\` on Windows. You can change the name and location — just tell me where.
+**Question 3.5 — choosing your root folder**
+
+Before asking, say this:
+
+> **One decision that deserves a moment of thought: where your OS lives.**
+>
+> Your Personal AI OS is not an app. It is a folder. That folder is the entire operating system. Every session, when you open it in Claude, two files inside it are read automatically — `CLAUDE.md` (your preferences and rules) and `MEMORY.md` (your profile and remembered facts). Your workstations are subfolders inside the same root. Everything compounds from this one location.
+>
+> This means a few things for how you choose it:
+>
+> **It should be permanent.** Claude will need to find this folder every session. Pick a location you will not move, delete, or restructure. Think of it like your home folder — it does not move.
+>
+> **It should be accessible.** You will open this folder every time you start a working session. `~/Documents/` or your home directory (`~/`) are ideal on Mac. A top-level folder on `C:\` works well on Windows.
+>
+> **It should not be inside the repo you just downloaded.** That repo is the installer. Your OS is the output. Keep them separate.
+>
+> **Suggested names** — short, hyphenated, no spaces:
+> - `personal-claude-os` (default, clear)
+> - `my-claude-os`
+> - `command-center`
+> - `brain`
+> - `my-os`
+>
+> **Good locations:**
+> - Mac / Linux: `~/personal-claude-os/` or `~/Documents/personal-claude-os/`
+> - Windows: `C:\personal-claude-os\` or `C:\Users\YourName\Documents\personal-claude-os\`
+>
+> **What to avoid:**
+> - Paths with spaces (e.g., `My Folder/AI stuff`) — use hyphens instead
+> - The Desktop — it gets cluttered and this folder is meant to be permanent
+> - Deep nested paths buried inside project or work folders — this is a root-level thing, not a subfolder of something else
+> - Inside a cloud sync folder you frequently wipe or restore — iCloud, Dropbox, and OneDrive are fine if you are careful, but know that your OS will sync to the cloud too
+>
+> You can move the folder later. If you do, just tell Claude the new path at the start of the next session.
+
+Then ask:
+
+> Where do you want your OS to live? You can accept the default or give me a custom path.
+>
+> Default: `~/personal-claude-os/` on Mac or Linux, `C:\personal-claude-os\` on Windows.
 
 After all five answers are collected, emit the phase-end summary:
 
