@@ -8,45 +8,65 @@ You downloaded Personal Claude OS. Three steps.
 
 This works on the **Claude Pro plan ($20/month)**. If you do not have a Claude account yet, go to `claude.ai`, sign up, and upgrade to Pro. That is all you need.
 
-Pick the path that matches how you use Claude:
+Pick the path that matches your setup:
 
 ---
 
-### Path A: Claude desktop app — recommended for most people
+### Path A: Claude desktop app via Cowork — recommended for everyone
 
-The Claude desktop app is the smoothest path. It is included in your $20 Pro plan.
+The easiest path. Works on the $20 Pro plan. No technical knowledge needed.
 
-1. Download the Claude desktop app from `claude.ai/download` if you do not have it already.
+**On macOS:**
+1. Download the Claude desktop app from `claude.ai/download` if you do not have it.
 2. Open the app and sign in.
-3. In the left sidebar, find **Projects** and create a new one. Give it any name — "Personal Claude OS setup" works.
-4. Inside the project, look for an option to **add files** or **upload context**. Upload everything from the `claude-personal-os-main` folder you unzipped.
-5. Start a new conversation inside that project. You will see the files are active as context.
+3. In the **top left corner**, click the **Cowork** tab.
+4. Upload the `claude-personal-os-main` folder you unzipped.
+5. Type `start` in the chat.
 
-You are ready. Go to Step 2.
-
----
-
-### Path B: Claude.ai web — also works on Pro
-
-1. Go to `claude.ai` in your browser and sign in.
-2. In the left sidebar, click **Projects** and create a new project.
-3. Inside the project, upload the files from the `claude-personal-os-main` folder using the file upload option.
-4. Open a conversation inside that project.
-
-**Note:** You cannot drag a folder directly into the web chat window — it will not work. Use Projects, as described above.
+**On Windows:**
+1. Download the Claude desktop app from `claude.ai/download` if you do not have it.
+2. Open the app and sign in.
+3. In the **top left corner**, click the **Cowork** tab.
+4. Upload the `claude-personal-os-main` folder you unzipped.
+5. Type `start` in the chat.
 
 ---
 
-### Path C: Claude Code (developers only, API credits required)
+### Path B: Claude Code via the Claude desktop app — macOS only
 
-Claude Code is a separate developer tool that bills on API usage — it is not included in the $20 Pro plan.
+Use this if you already have the Claude desktop app and want the Claude Code experience with the folder auto-loaded.
 
-- **Claude Code desktop:** Open the app. File → Open Folder → pick `claude-personal-os-main`. `CLAUDE.md` loads automatically.
-- **Claude Code CLI:** Open your terminal, navigate into the folder (`cd claude-personal-os-main`), and run `claude`.
+**On macOS:**
+1. Open the Claude desktop app.
+2. In the **top left corner**, switch to the **Claude Code** tab.
+3. Open the `claude-personal-os-main` folder — `CLAUDE.md` loads automatically.
+4. Type `start`.
+
+**On Windows:** Claude Code is not available inside the Claude desktop app on Windows. Use Path A or Path C instead.
 
 ---
 
-You will know it worked when Claude is active, the files are in context, and you are ready to chat.
+### Path C: Claude Code via the terminal — advanced, for coders only
+
+This path requires comfort with the command line. It bills on API usage — not included in the $20 Pro plan.
+
+**On macOS:**
+1. Open Terminal.
+2. Run: `cd ~/Downloads/claude-personal-os-main` (adjust the path to wherever you unzipped the folder).
+3. Run: `claude`
+4. Type `start`.
+
+**On Windows:**
+1. Open Command Prompt or PowerShell.
+2. Run: `cd C:\Users\YourName\Downloads\claude-personal-os-main` (adjust to wherever you unzipped).
+3. Run: `claude`
+4. Type `start`.
+
+If you do not have Claude Code installed, run `npm install -g @anthropic-ai/claude-code` first (requires Node.js).
+
+---
+
+You will know it worked when Claude is active, reads the setup context, and is ready to chat.
 
 ---
 
