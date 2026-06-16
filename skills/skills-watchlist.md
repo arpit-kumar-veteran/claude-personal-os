@@ -21,6 +21,19 @@ Track community skills you have heard about but have not yet installed or evalua
 
 ---
 
+## Monitoring Sources
+
+Check these periodically (monthly, or after seeing a skill post) to find new community skills worth evaluating:
+
+| Source | What to look for |
+|---|---|
+| charliehills.substack.com | Charlie Hills publishes new skill packs and stack updates |
+| github.com/topics/claude-code-skills | Community skills — filter by recently updated and star count |
+| github.com/rohitg00/awesome-claude-code-toolkit | Curated list — check the Skills section |
+| Claude Code marketplace / Cowork plugins | Plugin releases from the Claude ecosystem |
+
+---
+
 ## Status key
 
 | Status | Meaning |
