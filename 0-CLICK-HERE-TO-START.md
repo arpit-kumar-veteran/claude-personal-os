@@ -20,14 +20,14 @@ The easiest path. Works on the $20 Pro plan. No technical knowledge needed.
 1. Download the Claude desktop app from `claude.ai/download` if you do not have it.
 2. Open the app and sign in.
 3. In the **top left corner**, click the **Cowork** tab.
-4. Upload the `claude-personal-os-main` folder you unzipped.
+4. Look for the attachment or upload icon in the chat area. Click it, then select the `claude-personal-os-main` folder you unzipped. If it does not accept a whole folder, open the folder first and select all the files inside it (press Cmd+A to select all, then attach). Wait until you see the files listed as attached in the chat.
 5. Type `start` in the chat.
 
 **On Windows:**
 1. Download the Claude desktop app from `claude.ai/download` if you do not have it.
 2. Open the app and sign in.
 3. In the **top left corner**, click the **Cowork** tab.
-4. Upload the `claude-personal-os-main` folder you unzipped.
+4. Look for the attachment or upload icon in the chat area. Click it, then select the `claude-personal-os-main` folder you unzipped. If it does not accept a whole folder, open the folder first and select all the files inside it (press Ctrl+A to select all, then attach). Wait until you see the files listed as attached in the chat.
 5. Type `start` in the chat.
 
 ---

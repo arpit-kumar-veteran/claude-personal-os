@@ -9,8 +9,10 @@ You use Claude every day. Every conversation starts from zero. Your context, you
 
 ## Three steps to get started
 
+You are on GitHub — the website where this project lives. The steps below download it to your computer.
+
 **1. Download this repo.**
-Click the green **Code** button above, then **Download ZIP**. Unzip it. You get a folder called `claude-personal-os-main`.
+Click the green **Code** button near the top right of this page, then **Download ZIP**. Once it downloads, open your Downloads folder and double-click the ZIP to unzip it. You will get a folder called `claude-personal-os-main`.
 
 **2. Open the folder in your Claude app.**
 

@@ -17,7 +17,7 @@ Say exactly this (adapt tone slightly to match the user, but keep this structure
 
 > Hi. I am Claude, and I am going to set up your Personal Claude OS over the next 30 minutes.
 >
-> **What is a Personal AI OS?** It is a folder on your computer that tells Claude who you are, how you work, and what you are working on. Instead of starting every conversation from zero, Claude reads your files at the start of each session and already knows your context, your rules, and your open threads. The folder is your operating system. It lives on your machine, not in any cloud service, and it belongs entirely to you.
+> **What is a Personal AI OS?** It is a personal profile that Claude reads every time you start a session. Instead of re-explaining who you are and what you are working on every conversation, Claude already knows — your name, your goals, your preferences, your open tasks. It lives as a folder of simple text files on your computer, not in any cloud service, and it belongs entirely to you.
 >
 > Before the first question, here is the full picture of what we are doing together — so you know exactly where we are headed at every step:
 >
@@ -56,15 +56,14 @@ WAIT. Do not proceed until the user responds. If they ask questions, answer them
 
 Say:
 
-> Before the questions, do you have any of these?
+> Before the questions, do you have any of these? Sharing them means I can skip questions I can already answer.
 >
-> - LinkedIn profile (PDF export from LinkedIn, or paste your LinkedIn URL)
-> - Resume or CV (PDF or Word)
-> - Pitch deck or bio that describes your work
-> - A voice guide or writing style document you use
-> - Anything else that describes who you are
+> - **LinkedIn URL** — paste the link to your LinkedIn profile and I will read it. (Easiest option.)
+> - **LinkedIn PDF** — if you prefer a file: go to your LinkedIn profile, click the "More" button below your name, then "Save to PDF". Drag that file here.
+> - **Resume or CV** — PDF or Word, drag it into this chat.
+> - **Any document that describes you** — a bio, a pitch deck, a personal statement. Anything works.
 >
-> Drag and drop files into this chat now, or paste a URL. If you have nothing ready, just type **skip** and we move straight to the questions.
+> Drag and drop files here, or paste a link. If you have nothing ready right now, just type **skip** and we go straight to the questions.
 
 WAIT. If files arrive, follow `setup/ingest.md` to read them. Then say:
 
@@ -103,7 +102,11 @@ Then ask one question at a time. If you pre-filled an answer from ingested files
 > What is the single biggest thing you want this OS to help you with?
 
 **Question 3.4:**
-> Write me 2 to 3 sentences about yourself that a future Claude session should know — your background, what you are working on, what matters to you. (Or say "use what you read from my files".)
+> Write me 2 to 3 sentences about yourself that a future Claude session should know — your background, what you are working on, and what matters to you right now.
+>
+> For example: "I am a second-year business student preparing for internship applications and working on a small startup idea. I want help staying organised, writing better, and thinking through decisions."
+>
+> Or just say "use what you read from my files" if you shared a document earlier.
 
 **Question 3.5 — choosing your root folder**
 
@@ -121,30 +124,29 @@ Before asking, say this:
 >
 > **It should not be inside the repo you just downloaded.** That repo is the installer. Your OS is the output. Keep them separate.
 >
-> **Suggested names** — short, hyphenated, no spaces:
-> - `personal-claude-os` (default, clear)
+> **Suggested names** — keep it short, use hyphens instead of spaces:
+> - `personal-claude-os` (default — clear and descriptive)
 > - `my-claude-os`
-> - `command-center`
-> - `brain`
+> - `my-brain`
 > - `my-os`
 >
-> **Good locations:**
-> - Mac / Linux: `~/personal-claude-os/` or `~/Documents/personal-claude-os/`
-> - Windows: `C:\personal-claude-os\` or `C:\Users\YourName\Documents\personal-claude-os\`
+> **Where to put it:**
+> - **Mac:** Inside your Documents folder. So it would be at Documents → personal-claude-os. That is the safest default.
+> - **Windows:** Inside your Documents folder. So it would be at Documents → personal-claude-os.
 >
 > **What to avoid:**
-> - Paths with spaces (e.g., `My Folder/AI stuff`) — use hyphens instead
-> - The Desktop — it gets cluttered and this folder is meant to be permanent
-> - Deep nested paths buried inside project or work folders — this is a root-level thing, not a subfolder of something else
-> - Inside a cloud sync folder you frequently wipe or restore — iCloud, Dropbox, and OneDrive are fine if you are careful, but know that your OS will sync to the cloud too
+> - Folder names with spaces (e.g., "my claude os") — use hyphens instead so there are no surprises later
+> - The Desktop — it gets cluttered over time and this folder is meant to stay permanently
+> - Inside the installer folder you downloaded — that is a separate thing. Your OS is the output, not part of the installer.
+> - A folder you might delete or reorganise — this is a permanent home, treat it like one
 >
-> You can move the folder later. If you do, just tell Claude the new path at the start of the next session.
+> iCloud, Dropbox, and OneDrive are fine locations — just know your OS files will sync to the cloud too, which is actually a good backup.
+>
+> You can move the folder later. If you do, just tell Claude where you moved it at the start of the next session.
 
 Then ask:
 
-> Where do you want your OS to live? You can accept the default or give me a custom path.
->
-> Default: `~/personal-claude-os/` on Mac or Linux, `C:\personal-claude-os\` on Windows.
+> Where do you want your OS to live? The simplest answer is just "Documents folder" and I will set it up there. Or give me a specific name and location if you have a preference.
 
 After all five answers are collected, emit the phase-end summary:
 
@@ -185,7 +187,9 @@ Ask one at a time.
 > Any words, phrases, or habits I should never use? For example: jargon you dislike, filler phrases like "certainly" or "great question", emojis, exclamation marks. Type "none" if you have no restrictions.
 
 **Question 4.4:**
-> Do you already have a voice guide or writing style document? If yes, tell me where the file is and I will reference it. If not, type "no" and I will build voice rules from your answers here.
+> Last one. Most people skip this — type **no** if it does not apply to you.
+>
+> Do you have a writing style document or voice guide? For example, some people keep a file that says "always write formally" or "never use bullet points" or "my brand tone is X." If you have something like that, tell me where the file is and I will pull it in. If not, type **no** and I will build your voice rules from your answers so far.
 
 After all four answers, emit the phase-end summary:
 
@@ -216,32 +220,32 @@ Say before the catalog:
 Then present the catalog. Use the interview answers from Phases 3 and 4 to determine which 2 to 3 to mark as recommended. Add a one-line "Why for you:" under each recommended one.
 
 > ### Foundation workstations
-> These seven cover the most common needs for any professional.
+> These seven cover the most common needs for any professional or student.
 >
-> | Workstation | What it covers |
+> | Name | What it does for you |
 > |---|---|
-> | **career-hq** | Resume, cover letters, job applications, interview prep, outreach to employers and contacts |
-> | **email-hq** | Email drafting, reply tone-matching, thread discipline, avoiding inbox overwhelm |
-> | **brand-hq** | LinkedIn positioning, content creation, public identity — how you show up professionally online |
-> | **meeting-hq** | Meeting notes, transcript capture, action item extraction, follow-up tracking |
-> | **expense-hq** | Monthly burn tracking, bank and card reconciliation, spending category taxonomy |
-> | **property-hq** | Property or asset management, maintenance tracking, cost records, tenant or rental admin |
-> | **learning-hq** | Courses, books, skill development, personal knowledge capture |
+> | **Career HQ** | Resume, cover letters, job applications, interview prep, outreach to employers |
+> | **Email HQ** | Drafts emails for you, matches the right tone, keeps threads organised |
+> | **Brand HQ** | Your LinkedIn, content creation, how you show up professionally online |
+> | **Meeting HQ** | Meeting notes, transcript summaries, action items, follow-up reminders |
+> | **Expense HQ** | Monthly spending tracking, bank reconciliation, where your money goes |
+> | **Property HQ** | Rental or property management, maintenance records, cost tracking |
+> | **Learning HQ** | Courses, books, skills you are building, capturing what you learn |
 >
 > ### Advanced workstations
-> Add these when a domain keeps coming up in sessions and Claude keeps losing context.
+> Add these when a domain keeps coming up and Claude keeps losing context on it.
 >
-> | Workstation | What it covers |
+> | Name | What it does for you |
 > |---|---|
-> | **thinking-hq** | Structured reasoning: coach mode, strategist mode, devil's advocate, big decisions |
-> | **finances-hq** | Net worth, investments, FIRE planning, asset allocation, financial source-of-truth |
-> | **health-hq** | Family health tracking, lab results, supplements, conditions — one folder for everyone |
-> | **consulting-hq** | Freelance pipeline, proposals, client deliverables, billing and invoicing |
-> | **venture-hq** | Side business or startup: co-founder search, market intel, investor conversations |
-> | **life-transition-hq** | Relocation, career pivots, major decisions with long horizons and low reversibility |
-> | **intel-hq** | Recurring newsletter and digest processing: extract signals, discard noise, route to right places |
-> | **relationship-hq** | Personal CRM, network hygiene, follow-up cadence, conversation prep |
-> | **content-hq** | Content pipeline: writing, repurposing, scheduling, cross-platform publishing |
+> | **Thinking HQ** | Structured thinking for big decisions — coach mode, devil's advocate, strategic planning |
+> | **Finances HQ** | Net worth, investments, savings goals, financial planning |
+> | **Health HQ** | Health tracking, lab results, supplements, medical history for your whole family |
+> | **Consulting HQ** | Freelance or consulting pipeline, proposals, client work, invoicing |
+> | **Venture HQ** | Side business or startup — market research, co-founder search, investor conversations |
+> | **Life Transition HQ** | Big life changes — relocation, career pivot, major decisions with long horizons |
+> | **Intel HQ** | Newsletters and digests processed weekly — extract what matters, discard the rest |
+> | **Relationship HQ** | Personal network management, follow-up cadence, staying in touch with people who matter |
+> | **Content HQ** | Writing, repurposing, scheduling content across platforms |
 >
 > ---
 > Based on what you told me, I recommend:
@@ -281,13 +285,13 @@ Say before the first question:
 > 3 quick questions to set up your recurring routines.
 
 **Question 6.1:**
-> Do you want a weekly automated audit? It checks your OS for drift — missing memory entries, stale routing, uncaptured decisions — and proposes fixes. Takes about 5 minutes once a week. Recommended: yes.
+> Do you want a weekly automated check-in? Once a week, Claude spends about 5 minutes reviewing your personal OS to make sure everything is still accurate and up to date — checking that nothing important was forgotten, your preferences still reflect how you work, and your workstations are in good shape. It then suggests any updates for you to approve before anything changes. Recommended: yes.
 
 **Question 6.2 (ask only if yes):**
 > What day and time should the audit run? Default: Friday at 10:00 am. Change if you prefer.
 
 **Question 6.3:**
-> Do you want a session-close routine at the end of each working session? It reviews what changed during the session, proposes memory updates, and lists any open threads you should not forget. Recommended: yes.
+> Do you want a session-close routine at the end of each working session? When you are done for the day, Claude does a quick 2-minute wrap-up — it reviews what happened in the session, suggests anything new worth remembering, and flags anything you left unfinished. You approve before anything gets saved. Recommended: yes.
 
 After all answers, emit the phase-end summary:
 
@@ -369,9 +373,16 @@ Say:
 > 2. Tell Claude something you want remembered. Say **"remember [fact]"**. It will propose exactly where to save it and wait for your approval before writing.
 > 3. Say **"run the audit"**. Claude will check that your OS is correctly structured and report back in about 2 minutes.
 >
-> Your first-week guide is at `FIRST-WEEK.md` in the repository you downloaded. It has a day-by-day plan for the first 7 days.
+> **One important thing before you go:** You now have two separate folders on your computer.
 >
-> Want me to do a quick demo of any of these three things now, using your actual files?
+> - The **installer** (`claude-personal-os-main`) — the folder you downloaded from GitHub. You do not need this anymore. You can leave it in Downloads, move it to Trash, or keep it as a backup. It will not affect your OS either way.
+> - Your **personal OS** (`[path]`) — this is your actual operating system. This is the only folder you open in Claude from now on.
+>
+> Next time you open Claude, go straight to your personal OS folder. Open it the same way you opened the installer today — via the Cowork tab. Then just say **"hi"** and you are back in context.
+>
+> Your first-week guide is at `FIRST-WEEK.md` in the installer folder you downloaded. It has a day-by-day plan for the first 7 days.
+>
+> Want me to do a quick demo of any of the three things above now, using your actual files?
 
 WAIT. If they want a demo, do it with their real data. If they are done, proceed to Phase 9.
 
@@ -388,9 +399,10 @@ Write a setup log to `[their-os-folder]/setup-log.md` with:
 
 Then say:
 
-> Your setup log is saved at `[their-os-folder]/setup-log.md`.
+> Your setup log is saved inside your personal OS folder at `setup-log.md`. It has a record of every decision we made today.
 >
-> Your OS is at `[path]`. Next time you work, open that folder in Claude — not this one — and say "hi."
+> **Your new home is: `[path]`**
+> Open that folder in Claude every session — not the installer you downloaded. The installer's job is done.
 >
 > You are done. Welcome to your Personal Claude OS.
 
