@@ -88,7 +88,7 @@ Claude will guide you through the entire setup. Here is what to expect:
 - **If you go off-track** — ask a question, share something, go on a tangent — Claude will answer and then bring you back with a clear "Back to setup: [where we are]."
 - **If you stop midway** — close the app, come back tomorrow — type `start` again. Claude will find your progress and resume from where you left off.
 
-The setup takes about 30 minutes. You can pause at any point.
+The setup takes about 35 minutes. You can pause at any point.
 
 ---
 
@@ -106,6 +106,7 @@ Claude walks you through these phases, one at a time:
 | 6. Cadence | 3 questions. Weekly audit, session-close routine. | 2 min |
 | 7. Build | Claude creates your OS folder, fills in your files. Tells you exactly what was created and where. | 5 min |
 | 8. Handoff | What was built, how to use it from now on, three things to try immediately. | 2 min |
+| 9. Skills | Claude opens the Skills Catalog and recommends 2-3 skills matched to your workstations. You choose: install now, bookmark for later, or skip entirely. Skills can always be added after setup — this phase is optional. | 3-5 min |
 
 ---
 
@@ -116,6 +117,7 @@ A folder on your computer — you choose where — that contains your personal A
 - **`CLAUDE.md`** — your voice, preferences, and routing map. Claude reads this at the start of every session.
 - **`MEMORY.md`** — your profile and the facts Claude remembers about you. Grows session by session.
 - **1-3 workstation folders** — rules and memory for the domains you chose (job search, finance, health, meetings, etc.).
+- **A `skills/` folder** — ten core skills pre-installed: session-close, audit-system, deep-research, humanizer, and more. Add community skills any time.
 - **A weekly audit** — say "run the audit" any time. Claude checks that everything is correctly structured and reports back.
 
 The folder belongs to you. No cloud service, no subscription, no app required to use it. Edit files directly anytime, or ask Claude to edit on your behalf (it will always show you what it intends to change and wait for a yes).

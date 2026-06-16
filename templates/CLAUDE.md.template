@@ -20,7 +20,7 @@ When I say "remember this," write the information to MEMORY.md immediately and c
 
 Keep this file under {{REPLACE: 300}} lines. Point to resource files instead of repeating rules inline.
 
-**MEMORY scope rule.** MEMORY.md holds facts only: current state, contacts, decisions, file paths, status. It does not hold edit history, version notes, change summaries, or anything that lives elsewhere. Default to the shortest possible MEMORY entry that still gives a future session the operating context it needs. This rule applies to every MEMORY.md in the system.
+**MEMORY scope rule.** MEMORY.md holds facts only: current state, contacts, decisions, file paths, status. It does not hold edit history, version notes, change summaries, or anything that lives elsewhere. If a fact is already captured in a CHANGELOG or equivalent log file, do not duplicate it in MEMORY.md. Default to the shortest possible MEMORY entry that still gives a future session the operating context it needs. This rule applies to every MEMORY.md in the system.
 
 **MEMORY.md line ceiling.** Set a hard line ceiling per MEMORY.md file ({{REPLACE: e.g. 150 lines}}). When a file exceeds it, propose moving old or resolved entries to the workstation's ARCHIVE.md at session close. Never raise the ceiling; compress first, archive second.
 
@@ -42,12 +42,16 @@ Keep this file under {{REPLACE: 300}} lines. Point to resource files instead of 
 - Ask clarifying questions before starting a complex task.
 - For any complex or multi-step task, present the approach and wait for explicit approval before executing.
 - At the end of any task involving file edits, deletions, or structural changes, report what changed, confirm structure is intact, and flag anything unexpected. This is the checksum.
+- When producing any public artefact derived from personal data (sanitised repositories, redacted exports, anonymised case studies), present the full redaction token list and wait for explicit approval before writing any file.
 - Before any task involving a named file, document, or resource, check the relevant workstation's MEMORY.md first. Do not search, glob, or ask until MEMORY.md has been read and the answer is genuinely absent.
 - When a failure occurs, diagnose the root cause before proposing a fix. If existing rules were sufficient and simply were not followed, the fix is behavioural. Never patch a behavioural gap with a new structural rule. A rule added to a file that was not read will not be read either.
 - When proposing any corrective change, apply the minimum-change test: what is the smallest edit that closes this gap permanently? Default to the smallest, most targeted correction.
 - Before producing any written content on my behalf, read {{REPLACE: path to your voice principles file, or remove this line if you do not have one}}.
+- Before creating any new reference file (markdown, resource, or template), read the root CLAUDE.md and MEMORY.md to calibrate heading style, tone, and formatting. New files must match the existing system style.
 - If CLAUDE.md is approaching its line limit, flag it and suggest pulling relevant content into a reference file rather than expanding inline.
 - Before starting any task, check skills/skills-index.md. If a matching skill exists, say "A skill for this already exists: `[skill-name]`. Use it?" Wait for confirmation before proceeding.
+- After checking skills/skills-index.md, scan skills/skills-watchlist.md. If the task matches an entry marked "Unevaluated," surface it: "A community skill that might fit this task is not yet installed — [name]. Want to evaluate it before proceeding?" Wait for a yes before searching.
+- For tasks involving UI design, video creation, marketing copy, or browser automation where no installed skill matches: say once per session, "This is an area with active community skill development — want me to check skills-watchlist.md for a relevant skill?"
 - After completing a task that involved repetitive, multi-step operations or structured output generation, assess whether the pattern is reusable. If yes, ask whether to capture it as a skill.
 - When the same data exists or could exist in two places, flag it and propose consolidation. Default to single source of truth.
 - When a new working pattern emerges in a session that seems consistent with prior behaviour, surface it and ask whether to capture it as a rule.
@@ -77,6 +81,8 @@ These rules apply to every CLAUDE.md and MEMORY.md across the system.
 
 **Suggest, do not write.** When something new should be recorded, surface the suggestion in chat first. State the exact file, the exact section, and the proposed text. Wait for confirmation before writing.
 
+**Auto-write exception (optional).** You may designate one workstation as an exception where factual, objective session-close entries are written without a separate approval step. Define which workstation and what qualifies in that workstation's CLAUDE.md. Only objective facts qualify (e.g. application sent, contact added, decision made with a date). Interpretive, speculative, or behavioural entries still require approval.
+
 **Structure is immutable.** Every CLAUDE.md preserves the sections defined in this template. Every MEMORY.md preserves its header and sections. Do not add, rename, merge, or remove any section. Do not reformat tables, change heading levels, or alter existing entries. If content does not fit the existing sections, flag it. Do not invent a new section to hold it.
 
 **Formatting is preserved.** Maintain exact Markdown formatting: heading levels, table column structure, bullet style, meta-notes. Do not normalise, prettify, or reflow any file during an edit.
@@ -97,6 +103,8 @@ These rules apply to every CLAUDE.md and MEMORY.md across the system.
 |---|---|
 | {{REPLACE: path to voice principles file, or remove this row}} | Writing any content on my behalf |
 | skills/skills-index.md | Starting any task: check if a matching skill exists first |
+| skills/skills-watchlist.md | Starting any task: check after skills-index.md for unevaluated community skills that might fit |
+| skills/SKILLS-CATALOG.md | Choosing which skills to install, or recommending skills for a new workstation |
 
 ## Source-of-Truth Hierarchy
 
@@ -124,3 +132,21 @@ When I ask to create a new workstation, create a subfolder with that name and ad
 After creating the workstation, add a row to the Routing Map above.
 
 **Critical:** Preserve the exact section structure. Do not invent new sections (e.g., "Key Numbers," "Model Notes") to hold detailed content. Slot new information into the existing sections only. Workflow holds behavioural rules. MEMORY.md Key Decisions holds facts and context. The structure is load-bearing; breaking it breaks linkages across the system.
+
+## Creating New Projects
+
+When I ask to create a new project inside an existing workstation, create a subfolder and add these items:
+
+1. **CLAUDE.md** with these sections in this order:
+   - **Goal**: One sentence: what does "done" look like for this project?
+   - **Project-Specific Workflow**: How to approach this project's work, beyond the parent workstation's workflow.
+   - **Project-Specific Rules**: Constraints that only apply to this project.
+
+2. **MEMORY.md** with this structure:
+   - Header: "[Project Name] Memory"
+   - Two mandatory sections: **Status** (current state) and **Decisions** (choices made, with date and reasoning).
+   - Add one or two further sections only if the project has distinct data categories that do not fit either default section.
+
+3. **resources/**: Empty folder for project-scoped reference files.
+
+Projects inherit rules from both the root CLAUDE.md and their parent workstation. Do not duplicate rules that already exist at either level. Only add project-specific constraints.

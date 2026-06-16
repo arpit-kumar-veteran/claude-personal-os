@@ -2,6 +2,8 @@
 
 A registry of every skill available in this OS. Before starting any task, check here. If a matching skill exists, use it rather than improvising.
 
+For full descriptions of each skill, when to use it, and how to invoke it, see [SKILLS-CATALOG.md](SKILLS-CATALOG.md). For community skills not yet installed, see [skills-watchlist.md](skills-watchlist.md).
+
 ## How to use
 
 Say: "Use the [skill-name] skill." Or say what you want to do in plain language and Claude will match it to the right skill.

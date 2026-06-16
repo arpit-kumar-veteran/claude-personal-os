@@ -61,6 +61,17 @@ Six sections, around thirty questions in total.
 - What currency symbol or code is your default.
 - Anything else Claude should know about how you name things.
 
+### Section 7: Skills (3 questions)
+
+This section runs after the OS is fully built. The folder exists, the workstations are in place. Now Claude presents the skills catalog.
+
+- Claude opens `skills/SKILLS-CATALOG.md` and reads it in full. Then it presents the two or three skills most relevant to the workstations just installed, with a one-line reason for each recommendation.
+- **Install now or later?** The user chooses one of three paths:
+  - **Install now** — Claude walks through each recommended skill, confirms what it does, and registers it in `skills/skills-index.md`.
+  - **Bookmark for later** — Claude adds the skill names to `skills/skills-watchlist.md` with status "Unevaluated" and a note. The user can install any time by saying "install the [skill-name] skill."
+  - **Skip** — No action. Skills can always be added later by saying "show me the skills catalog."
+- Are there specific task types not covered by the recommended skills — for example, content creation, marketing, video, or web research — that should be flagged in the watchlist for follow-up?
+
 ## Output schema
 
 Answers are written to `setup/answers.md` (gitignored) in this shape:
@@ -84,6 +95,10 @@ integrations:
   cloud_drive: ...
 naming:
   date_format: YYYY-MM-DD
+skills:
+  install_now: [skill-name, ...]
+  bookmarked: [skill-name, ...]
+  skipped: []
 ```
 
 The skill then walks every `templates/**/*.template` file, replaces every `{{REPLACE: ...}}` marker with the matching answer, and writes the result to the corresponding non-template path.
