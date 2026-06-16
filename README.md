@@ -13,9 +13,12 @@ You use Claude every day. Every conversation starts from zero. Your context, you
 Click the green **Code** button above, then **Download ZIP**. Unzip it. You get a folder called `claude-personal-os-main`.
 
 **2. Open the folder in your Claude app.**
-- **Claude.ai (web or desktop):** drag the unzipped folder into a new conversation, or use *Add files* to attach it.
-- **Claude Code desktop:** File → Open Folder → pick `claude-personal-os-main`.
-- **Claude Code CLI:** `cd claude-personal-os-main` then `claude`.
+
+This works on the **Claude Pro plan ($20/month)**. No API key or separate subscription needed for the two recommended paths below.
+
+- **Recommended — Claude desktop app (Pro, $20/month):** Download from `claude.ai/download` if you do not have it. Open the app, create a new Project, and upload the files from the unzipped `claude-personal-os-main` folder into it. Start a conversation inside that project and type `start`.
+- **Claude.ai web (Pro, $20/month):** Go to `claude.ai`, create a new Project under your account, and upload the files from the unzipped folder. Open a conversation in that project and type `start`. Note: you cannot drag a folder directly into a web chat window — use Projects.
+- **Claude Code desktop or CLI (developers, API credits required):** File → Open Folder → pick `claude-personal-os-main`, or `cd claude-personal-os-main` then `claude` in your terminal. `CLAUDE.md` auto-loads. Type `start`.
 
 **3. Type: `start`**
 

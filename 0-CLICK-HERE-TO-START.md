@@ -6,15 +6,47 @@ You downloaded Personal Claude OS. Three steps.
 
 ## Step 1: Open this folder in your Claude app
 
-You need a Claude app. If you do not have one, go to `claude.com` and download the desktop app (look for Claude Cowork — it is the easiest). Sign in, then come back here.
+This works on the **Claude Pro plan ($20/month)**. If you do not have a Claude account yet, go to `claude.ai`, sign up, and upgrade to Pro. That is all you need.
 
-Once you have the app:
+Pick the path that matches how you use Claude:
 
-- **Claude.ai (web or desktop app):** Open a new conversation. Drag this folder into the chat window, or click the attachment icon and add it. You should see the files appear.
-- **Claude Code desktop:** Open the app. Go to File → Open Folder. Pick the `claude-personal-os-main` folder you unzipped.
-- **Claude Code CLI (developers only):** Open your terminal. Navigate into this folder (`cd claude-personal-os-main`) and run `claude`.
+---
 
-You will know it worked when Claude is active and ready to chat, with this folder as context.
+### Path A: Claude desktop app — recommended for most people
+
+The Claude desktop app is the smoothest path. It is included in your $20 Pro plan.
+
+1. Download the Claude desktop app from `claude.ai/download` if you do not have it already.
+2. Open the app and sign in.
+3. In the left sidebar, find **Projects** and create a new one. Give it any name — "Personal Claude OS setup" works.
+4. Inside the project, look for an option to **add files** or **upload context**. Upload everything from the `claude-personal-os-main` folder you unzipped.
+5. Start a new conversation inside that project. You will see the files are active as context.
+
+You are ready. Go to Step 2.
+
+---
+
+### Path B: Claude.ai web — also works on Pro
+
+1. Go to `claude.ai` in your browser and sign in.
+2. In the left sidebar, click **Projects** and create a new project.
+3. Inside the project, upload the files from the `claude-personal-os-main` folder using the file upload option.
+4. Open a conversation inside that project.
+
+**Note:** You cannot drag a folder directly into the web chat window — it will not work. Use Projects, as described above.
+
+---
+
+### Path C: Claude Code (developers only, API credits required)
+
+Claude Code is a separate developer tool that bills on API usage — it is not included in the $20 Pro plan.
+
+- **Claude Code desktop:** Open the app. File → Open Folder → pick `claude-personal-os-main`. `CLAUDE.md` loads automatically.
+- **Claude Code CLI:** Open your terminal, navigate into the folder (`cd claude-personal-os-main`), and run `claude`.
+
+---
+
+You will know it worked when Claude is active, the files are in context, and you are ready to chat.
 
 ---
 
