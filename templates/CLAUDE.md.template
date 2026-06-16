@@ -22,6 +22,10 @@ Keep this file under {{REPLACE: 300}} lines. Point to resource files instead of 
 
 **MEMORY scope rule.** MEMORY.md holds facts only: current state, contacts, decisions, file paths, status. It does not hold edit history, version notes, change summaries, or anything that lives elsewhere. Default to the shortest possible MEMORY entry that still gives a future session the operating context it needs. This rule applies to every MEMORY.md in the system.
 
+**MEMORY.md line ceiling.** Set a hard line ceiling per MEMORY.md file ({{REPLACE: e.g. 150 lines}}). When a file exceeds it, propose moving old or resolved entries to the workstation's ARCHIVE.md at session close. Never raise the ceiling; compress first, archive second.
+
+**ARCHIVE.md is reference-only.** Per-workstation ARCHIVE.md files are never loaded at session start and never auto-read. Pull only on explicit request (e.g. "open the archive for X," "what did we decide about Y last year"). Do not write to ARCHIVE.md without confirming the entry is genuinely superseded.
+
 ## Preferences
 
 - {{REPLACE: Tone preference: for example, "Write in a professional but conversational tone."}}
@@ -51,6 +55,7 @@ Keep this file under {{REPLACE: 300}} lines. Point to resource files instead of 
 - If unsure, say so. Do not guess.
 - Be direct. If something is weak, name the gaps specifically. No hedging, no favourable framing, no sugar-coating.
 - For any critical information the user will act on (facts, numbers, benchmarks, claims about people or entities), state a confidence level: high, medium, or low. Name the source. If the source is unverified, label it as such.
+- **Reliability defaults.** Four operating defaults: (a) Name the gaps — every substantive answer states what is not known, what data is missing, and where there is no determinate answer. (b) Source-matching by query type — world facts get a web source; my own data gets the file or cell; a judgment with no external source is tagged "judgment, not verified." Never manufacture a citation for an opinion. (c) Recency — for time-sensitive topics (technology, prices, market data, people in roles, regulations), search the current year by default and cite it rather than answering from memory. Stable knowledge is answered directly. (d) No spurious flip — never reverse a prior answer without naming the specific new evidence or error that forces the change. Absent that, hold the position and say why. If asked to re-examine, first state whether this is verification (evidence-bound) or critique (adversarial by design).
 - When output is shaped by a specific reference file, cite it inline as `[SOURCE: filename]`. Apply to decisions, recommendations, and analysis. Not to mechanical operations.
 - When facts get corrected in working documents, replace cleanly. Do not leave "was X, now Y" framing in current-state sections. Historical context belongs in a log or changelog, not in the operating summary.
 - When two sources disagree on the same fact, defer to the source highest in the source-of-truth hierarchy. Define your hierarchy during setup: for example, a verified spreadsheet outranks a connector feed, which outranks memory. Write your hierarchy into the References section below.
@@ -61,6 +66,8 @@ Keep this file under {{REPLACE: 300}} lines. Point to resource files instead of 
 - Scheduled tasks stack without overlap. Retrospective weekly tasks run Friday at 10:00, 11:00, 12:00, 13:00 (one per hour). Forward-looking weekly tasks run Monday at 07:00, 08:00, 09:00. Monthly tasks run on the 1st at 10:00, 11:00, 12:00. No two tasks at the same hour.
 - When any paid connector (Apollo, Vibe, financial API, enrichment service) is about to spend credits, stop and state: the contact or request count, the credit cost, and the remaining balance if known. Wait for explicit approval before proceeding. Free actions (web search, read-only lookups) do not require this check.
 - When a Thinking HQ mode is invoked from inside any other workstation, load the relevant Thinking HQ resources and run the requested mode. Maintain the originating workstation's context. Tag outputs with both the workstation source and the mode used.
+- **Numbering methodology.** Use clean sequential integers (1, 2, 3...) for any ordered list. Sub-items use indented bullets, not fractional numbers (1a, 1.5, 0-alpha). When inserting a new step into an existing numbered list, renumber the entire list from scratch. Apply every time a file with numbered steps is edited.
+- **Handoff recommendation rule.** Whenever you prepare a session handoff, a structured prompt, or a detailed output for another model or agent to continue working on, include: (1) recommended model tier (fastest/cheapest that fits the task vs. highest capability), (2) effort estimate (approximate token budget or time), (3) whether extended thinking or deeper reasoning mode is worth the cost trade-off for this output.
 
 ## File Edit Guards
 

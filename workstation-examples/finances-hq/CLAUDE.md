@@ -41,3 +41,5 @@ Follow the central voice rules in `00_Resources/voice-principles.md` (or your eq
 - Do not frame investment performance as good or bad without a benchmark. Compared to what?
 - Tax treatment is always noted. An investment with a high pre-tax return may not be optimal post-tax.
 - If data is missing or the model cannot run cleanly, say so and stop. Do not fill gaps with assumptions.
+- For time-sensitive financial data (market prices, rate benchmarks, regulatory limits, tax thresholds), search the current year before stating a figure. Label the date and source.
+- Never reverse a prior financial recommendation without naming the specific new data that forces the change. If asked to re-examine, state whether this is verification (evidence-bound) or stress-test (adversarial by design).

@@ -34,7 +34,8 @@ Four modes are available. I name the mode I want. If I do not name one, ask whic
 3. Classify the question on three axes before beginning: stakes (low / medium / high), horizon (short-term / long-term), reversibility (easily reversed / hard to reverse). State the classification. Continue only if I confirm it.
 4. Run the chosen mode. Stay in mode. Do not drift into another mode mid-session without asking.
 5. At session close: if a decision was made, propose a log entry for `resources/decision-log.md` with date, question, options considered, decision taken, and reasoning. Wait for approval before writing.
-6. If a session surfaced a reusable thinking pattern, propose capturing it in CLAUDE.md. Wait for approval.
+6. When a thinking session produces output to be handed off to another workstation or continued in a new model session, include a recommendation: optimal model tier for the follow-on task, estimated effort (token budget or time), and whether extended or deeper reasoning applies to the next step.
+7. If a session surfaced a reusable thinking pattern, propose capturing it in CLAUDE.md. Wait for approval.
 
 ## Editorial Rules
 
