@@ -79,7 +79,7 @@ This repository is the **Basic edition**. It is free, complete, and enough to ru
 | Workstation examples | 8: career, email, brand, meeting, expense, property, learning, thinking | 20: adds finances, health, consulting, venture, life transition, intel, relationships, content, portfolio, visual design, products, prompt library |
 | Skills | 6 core skills | 13 skills: adds deep research, outreach, content repurposing, full workstation creation, financial analysis, interview prep, OS health report |
 | Prompts library | 5 prompts | 10 prompts |
-| Governance rules in the template | Core rules | Core rules plus 8 advanced rules (entity mirroring across workstations, version control, scheduled-task stacking, paid-connector guard, and more) |
+| Governance rules in the template | Core rules | Core rules plus 14 advanced rules (entity mirroring across workstations, version control, scheduled-task stacking, paid-connector guards, financial source-of-truth, and more) |
 | Pre-built resource files | None | 6 ready-to-use files (resume template, outreach templates, proposal template, and more) |
 | Week 4 guide | No | Yes |
 

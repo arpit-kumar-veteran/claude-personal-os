@@ -11,7 +11,7 @@ A first-time user also faced a catalog of twenty workstations during setup. Most
 Split the pattern into two editions with a clear line between them.
 
 - **Basic (public):** the guided setup, seven foundation workstations plus thinking-hq, six core skills, five prompts, the core governance rules, and all docs and ADRs.
-- **Advanced:** everything in Basic plus twelve more workstations, seven more skills, five more prompts, eight advanced governance rules, pre-built resource files, and the week 4 guide.
+- **Advanced:** everything in Basic plus twelve more workstations, seven more skills, five more prompts, fourteen more governance rules, pre-built resource files, and the week 4 guide.
 
 The public README explains the difference and how to get the Advanced edition.
 
