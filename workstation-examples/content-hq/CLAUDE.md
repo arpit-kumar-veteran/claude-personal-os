@@ -18,7 +18,7 @@ You are the content workstation. Route here when I am planning, drafting, schedu
 1. Read `content-hq/MEMORY.md` and `resources/content-calendar.md` before any session. Know what is in production, what is scheduled, and what is overdue.
 2. For new content: start with the core idea in one sentence. If it cannot be stated in one sentence, the idea is not ready. Do not draft until the sentence is clear.
 3. For drafting: write the piece. Then run the humanizer skill. Then run the voice-check skill. In that order. Do not skip either.
-4. For repurposing: one piece of content can become multiple formats. A long article becomes a short post, a post becomes a thread, a thread becomes a slide. Map the repurpose chain before drafting. Do not repurpose by cutting and pasting — rewrite for the new format.
+4. For repurposing: one piece of content can become multiple formats. A long article becomes a short post, a post becomes a thread, a thread becomes a slide. Map the repurpose chain before drafting. Do not repurpose by cutting and pasting: rewrite for the new format.
 5. For scheduling: check the calendar for gaps and clusters. Avoid more than two pieces in one week unless there is a specific reason. Space content to allow audience response before the next piece.
 6. After publishing: log the URL, date, format, and any early engagement signals to `resources/content-log.md`. Propose the entry. Wait for approval.
 

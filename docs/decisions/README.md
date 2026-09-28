@@ -8,12 +8,13 @@ This folder holds the design decisions behind the operating system pattern. Each
 |---|---|---|
 | [0001](0001-two-tier-memory.md) | Two-tier memory | Root memory plus per-workstation memory. Loaded by scope. |
 | [0002](0002-file-edit-guards.md) | File edit guards | No edit to governance files without explicit per-session permission. |
-| [0003](0003-generic-templates-over-personal-mirror.md) | Generic templates over personal mirror | Publish the pattern, not a sanitised personal copy. |
+| [0003](0003-generic-templates-over-personal-mirror.md) | Generic templates over personal mirror | Publish the pattern, not a sanitised personal copy. Partially superseded by 0009. |
 | [0004](0004-scheduled-audit-cadence.md) | Scheduled audit cadence | Weekly compliance check runs automatically. |
 | [0005](0005-no-auto-write-default.md) | No auto-write default | Assistant proposes, user approves, then assistant writes. |
 | [0006](0006-single-repo-not-per-workstation.md) | Single repo, not per workstation | One root for cross-cutting concerns. Workstations are folders. |
 | [0007](0007-skills-registry.md) | Skills registry | Recurring patterns become Markdown skills indexed in a registry. |
 | [0008](0008-interview-driven-personalisation.md) | Interview-driven personalisation | A setup skill interviews the cloner and fills placeholders. |
+| [0009](0009-sanitised-worked-examples.md) | Sanitised worked examples alongside templates | Worked examples from the private system are allowed once rewritten generically and checked for private tokens. Partially supersedes 0003. |
 
 ## Why ADRs
 

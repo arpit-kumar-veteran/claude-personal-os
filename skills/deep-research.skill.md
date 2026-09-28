@@ -1,6 +1,6 @@
 ---
 name: deep-research
-description: Multi-source, adversarially verified research on any topic. Fan-out across multiple search angles, fetch primary sources, challenge every major claim, then synthesise a cited report. Use when a question needs fact-checking rather than fast answers — competitive analysis, market sizing, regulatory facts, counterparty claims, benchmarks you will act on.
+description: Multi-source, adversarially verified research on any topic. Fan-out across multiple search angles, fetch primary sources, challenge every major claim, then synthesise a cited report. Use when a question needs fact-checking rather than fast answers: competitive analysis, market sizing, regulatory facts, counterparty claims, benchmarks you will act on.
 ---
 
 # Deep Research
@@ -49,10 +49,10 @@ Label each claim with a confidence level: **high** (multiple independent primary
 
 Produce the report in four sections:
 
-1. **Answer** — the direct answer to the research question in two to four sentences.
-2. **Evidence** — the supporting claims, each with source name and confidence level.
-3. **Counterarguments** — what the adversarial check found. If nothing credible, state that explicitly.
-4. **Sources** — numbered list of every source cited, with URL or publication name and date.
+1. **Answer**: the direct answer to the research question in two to four sentences.
+2. **Evidence**: the supporting claims, each with source name and confidence level.
+3. **Counterarguments**: what the adversarial check found. If nothing credible, state that explicitly.
+4. **Sources**: numbered list of every source cited, with URL or publication name and date.
 
 ### Phase 5: Flag limits
 

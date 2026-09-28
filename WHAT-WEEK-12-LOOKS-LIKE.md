@@ -19,7 +19,7 @@ The system is not impressive at week 12 because of its size. It is impressive be
 
 You open the OS folder. Claude reads your CLAUDE.md and MEMORY.md. No re-orientation. No "just to remind you, I am working on..."
 
-You say what you need. Claude routes to the right workstation. If it routes wrong, you know your routing map needs tightening — and you fix it in five minutes instead of wondering why Claude keeps missing context.
+You say what you need. Claude routes to the right workstation. If it routes wrong, you know your routing map needs tightening, and you fix it in five minutes instead of wondering why Claude keeps missing context.
 
 At the end of the session, you say "run session-close." Claude produces three to five memory proposals. You approve two, decline one, and close. Total time: four minutes.
 

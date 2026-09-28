@@ -6,7 +6,7 @@ Use this template to document a real deployment of the Personal Claude OS. Fill 
 
 ## Profile
 
-**Who:** [Describe in general terms — role, industry, experience level, technical background. No name or employer.]
+**Who:** [Describe in general terms: role, industry, experience level, technical background. No name or employer.]
 
 **Context:** [What was their situation when they started? What prompted them to try this system?]
 
@@ -24,7 +24,7 @@ Use this template to document a real deployment of the Personal Claude OS. Fill 
 
 **Timeline:** [How long from first setup to a stable deployment?]
 
-**Workstations created:** [List them. No personal details — just the domain labels.]
+**Workstations created:** [List them. No personal details: just the domain labels.]
 
 **Skills registered:** [List them.]
 

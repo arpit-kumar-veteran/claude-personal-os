@@ -25,10 +25,10 @@ Before the interview, check:
 
 Ask each question separately. Wait for the full answer before moving to the next.
 
-**Question 1 — Name**
+**Question 1: Name**
 What should this workstation be called? Keep it lowercase with hyphens (e.g. `career-hq`, `health-hq`). The name should describe the domain, not the tool or task.
 
-**Question 2 — Identity**
+**Question 2: Identity**
 Write the Identity paragraph for this workstation. It needs three things:
 - What routes here (specific triggers, not general descriptions).
 - What does NOT route here (the counter-examples, which are as important as the inclusions).
@@ -36,15 +36,15 @@ Write the Identity paragraph for this workstation. It needs three things:
 
 If the answer is vague, ask one more question: "Name two tasks that belong here and two tasks that definitely do not."
 
-**Question 3 — Resources**
+**Question 3: Resources**
 What files, links, or reference materials does this workstation need to read regularly? For each one, what is the trigger condition for reading it?
 
 If none yet, that is acceptable. The resources table starts empty and grows.
 
-**Question 4 — Workflow**
+**Question 4: Workflow**
 Walk me through the primary task in this workstation, step by step. Aim for 4 to 7 steps. Each step should be an action, not a heading.
 
-**Question 5 — Editorial rules**
+**Question 5: Editorial rules**
 What specific rules apply to writing or behaviour in this workstation that are not already in the root CLAUDE.md? Aim for 3 to 5 rules. Each rule must be short and testable.
 
 ### Step 3: Generate files

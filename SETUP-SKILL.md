@@ -1,12 +1,12 @@
-# Self-installing setup skill: v2 in progress
+# Self-installing setup skill: design spec
 
-**Status:** Designed, not yet implemented. Ships in v0.2. Tracked publicly in the v2 GitHub Issue linked from the repo Issues tab.
+**Status:** Shipped in v0.4.0 as the guided setup wizard. The live instructions are in [`setup/bootstrap.md`](setup/bootstrap.md). This file is the original design spec, kept for reference.
 
-This file documents the v2 setup skill that will interview a new cloner and personalise the templates automatically. v1 ships without it; placeholders in the templates are filled manually following GETTING-STARTED.md. v2 ships next week.
+This file documents the setup skill that interviews a new user and personalises the templates automatically.
 
 ## What it will do
 
-A single skill the cloner invokes after cloning the repo. It reads a structured interview file, asks each question in turn, captures answers to a local file (gitignored), and substitutes every `{{REPLACE: ...}}` marker across the templates with the user's answer. Every placeholder traces to one question. No hidden state.
+A single skill the cloner invokes after cloning the repo. It reads a structured interview file, asks each question in turn, captures answers to a progress file inside the user's OS folder, and substitutes every `{{REPLACE: ...}}` marker across the templates with the user's answer. Every placeholder traces to one question. No hidden state.
 
 ## Why this is in v1 as a design spec
 
@@ -67,14 +67,14 @@ This section runs after the OS is fully built. The folder exists, the workstatio
 
 - Claude opens `skills/SKILLS-CATALOG.md` and reads it in full. Then it presents the two or three skills most relevant to the workstations just installed, with a one-line reason for each recommendation.
 - **Install now or later?** The user chooses one of three paths:
-  - **Install now** — Claude walks through each recommended skill, confirms what it does, and registers it in `skills/skills-index.md`.
-  - **Bookmark for later** — Claude adds the skill names to `skills/skills-watchlist.md` with status "Unevaluated" and a note. The user can install any time by saying "install the [skill-name] skill."
-  - **Skip** — No action. Skills can always be added later by saying "show me the skills catalog."
-- Are there specific task types not covered by the recommended skills — for example, content creation, marketing, video, or web research — that should be flagged in the watchlist for follow-up?
+  - **Install now**: Claude walks through each recommended skill, confirms what it does, and registers it in `skills/skills-index.md`.
+  - **Bookmark for later**: Claude adds the skill names to `skills/skills-watchlist.md` with status "Unevaluated" and a note. The user can install any time by saying "install the [skill-name] skill."
+  - **Skip**: No action. Skills can always be added later by saying "show me the skills catalog."
+- Are there specific task types not covered by the recommended skills, for example, content creation, marketing, video, or web research, that should be flagged in the watchlist for follow-up?
 
 ## Output schema
 
-Answers are written to `setup/answers.md` (gitignored) in this shape:
+Answers are written to `[os-folder]/setup-progress.md` (inside the user's OS folder, never inside this installer) in this shape:
 
 ```yaml
 identity:

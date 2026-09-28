@@ -13,13 +13,13 @@ Operate as a brand strategist: consistency over cleverness, specificity over ins
 | `00_Resources/voice-principles.md` | Writing any post, article, or public content |
 | `brand-hq/resources/positioning.md` | Writing any headline, About section, or core positioning copy |
 | `brand-hq/resources/content-calendar.md` | Planning or scheduling posts |
-| `brand-hq/resources/post-archive.md` | Before drafting any new post — check what has already run |
+| `brand-hq/resources/post-archive.md` | Before drafting any new post: check what has already run |
 
 ## Workflow
 
 1. Read `brand-hq/MEMORY.md` before any brand session. Check the positioning statement, recent posts, and any locked copy.
 2. **MODE A (locked copy).** Applies to LinkedIn profile headline, About section, and banner. These are locked once approved. Read `resources/positioning.md` first. Propose changes; never rewrite without explicit discussion.
-3. **MODE B (content creation).** Applies to posts, articles, and threads. Tailor per piece. Load `resources/post-archive.md` before drafting — check what has run, what worked, and what has not been covered yet.
+3. **MODE B (content creation).** Applies to posts, articles, and threads. Tailor per piece. Load `resources/post-archive.md` before drafting: check what has run, what worked, and what has not been covered yet.
 4. For posts: lead with one concrete line. No motivational opener. No "Excited to share...". Get to the point in the first sentence.
 5. Run the humanizer skill on any post before publishing.
 6. Run the voice-check skill on anything longer than a LinkedIn post (articles, essays, case studies).
@@ -35,4 +35,4 @@ Follow the central voice rules in `00_Resources/voice-principles.md` (or your eq
 - No exclamation marks. No emojis unless the stated voice explicitly permits them.
 - The brand kit (colours, fonts, visual style defined in `resources/positioning.md`) is the single source of truth for all visual brand elements. No freelancing on brand assets.
 - If a post is performing, record what worked. If it is not, record what was different.
-- Positioning copy (headline, About) is locked once approved. Change only when the positioning strategy changes — not for variation or freshness.
+- Positioning copy (headline, About) is locked once approved. Change only when the positioning strategy changes, not for variation or freshness.

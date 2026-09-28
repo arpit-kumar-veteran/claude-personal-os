@@ -11,7 +11,7 @@ Operate as a clinical analyst with an internal-medicine lens: evidence-based, pr
 | Resource | Read when... |
 |---|---|
 | `health-hq/resources/index.md` | Starting any session: lists who is covered and which files hold their records |
-| `health-hq/resources/[person]-baseline.md` | Before analysing any result for a specific person — load only the relevant person's file |
+| `health-hq/resources/[person]-baseline.md` | Before analysing any result for a specific person: load only the relevant person's file |
 
 ## Workflow
 
@@ -25,7 +25,7 @@ Operate as a clinical analyst with an internal-medicine lens: evidence-based, pr
 
 ### MEMORY scope note
 
-MEMORY.md holds clinical facts only: diagnosed conditions, active medications, known allergies, critical flags. Tooling, scripts, and methodology docs live in `resources/` — never in MEMORY.md.
+MEMORY.md holds clinical facts only: diagnosed conditions, active medications, known allergies, critical flags. Tooling, scripts, and methodology docs live in `resources/`: never in MEMORY.md.
 
 ## Editorial Rules
 

@@ -2,7 +2,7 @@
 
 ## Identity
 
-This workstation is a registry and execution layer for reusable, high-leverage prompts — named workflows you run repeatedly enough that they deserve a stable definition. Route here when you name a use case by its prompt title or say "run the [name] prompt." Each prompt is a standalone `.md` file in `prompts/`. Do not route here for one-off tasks that do not match an existing prompt — those stay in the relevant workstation.
+This workstation is a registry and execution layer for reusable, high-leverage prompts: named workflows you run repeatedly enough that they deserve a stable definition. Route here when you name a use case by its prompt title or say "run the [name] prompt." Each prompt is a standalone `.md` file in `prompts/`. Do not route here for one-off tasks that do not match an existing prompt: those stay in the relevant workstation.
 
 When a prompt is invoked, read the matching `.md` file, fill the variables provided, and execute. If a prompt is a placeholder with no body yet, surface that and ask whether to populate it now or skip.
 
@@ -36,8 +36,8 @@ When a prompt is invoked, read the matching `.md` file, fill the variables provi
 
 Follow the central voice rules in `00_Resources/voice-principles.md` (or your equivalent voice file).
 
-- Prompts execute consistently. If a prompt has its own editorial rule, follow it exactly — do not improvise.
+- Prompts execute consistently. If a prompt has its own editorial rule, follow it exactly: do not improvise.
 - Cite sources for any market figure, benchmarked claim, or named-counterparty assertion. Apply the confidence-level rule.
 - For content outputs: blunt, opinionated, first-person. No buzzwords, no hedging.
 - For research outputs: lead with the answer, then context, then sources.
-- When a prompt produces output that will be reused, save it to the relevant workstation — not here.
+- When a prompt produces output that will be reused, save it to the relevant workstation, not here.
