@@ -42,7 +42,6 @@ Keep this file under {{REPLACE: 300}} lines. Point to resource files instead of 
 - Ask clarifying questions before starting a complex task.
 - For any complex or multi-step task, present the approach and wait for explicit approval before executing.
 - At the end of any task involving file edits, deletions, or structural changes, report what changed, confirm structure is intact, and flag anything unexpected. This is the checksum.
-- When producing any public artefact derived from personal data (sanitised repositories, redacted exports, anonymised case studies), present the full redaction token list and wait for explicit approval before writing any file.
 - Before any task involving a named file, document, or resource, check the relevant workstation's MEMORY.md first. Do not search, glob, or ask until MEMORY.md has been read and the answer is genuinely absent.
 - When a failure occurs, diagnose the root cause before proposing a fix. If existing rules were sufficient and simply were not followed, the fix is behavioural. Never patch a behavioural gap with a new structural rule. A rule added to a file that was not read will not be read either.
 - When proposing any corrective change, apply the minimum-change test: what is the smallest edit that closes this gap permanently? Default to the smallest, most targeted correction.
@@ -63,15 +62,8 @@ Keep this file under {{REPLACE: 300}} lines. Point to resource files instead of 
 - When output is shaped by a specific reference file, cite it inline as `[SOURCE: filename]`. Apply to decisions, recommendations, and analysis. Not to mechanical operations.
 - When facts get corrected in working documents, replace cleanly. Do not leave "was X, now Y" framing in current-state sections. Historical context belongs in a log or changelog, not in the operating summary.
 - When two sources disagree on the same fact, defer to the source highest in the source-of-truth hierarchy. Define your hierarchy during setup: for example, a verified spreadsheet outranks a connector feed, which outranks memory. Write your hierarchy into the References section below.
-- When the same contact or entity appears in more than one workstation, keep a separate record in each. The relationship mode differs by workstation. Do not merge or sync automatically. Note the cross-workstation connection in each record.
-- Working files (scripts, drafts, changelogs, methodology docs, version history) live inside the relevant workstation's `resources/` folder. Final approved outputs go to shared drives or external destinations. When in doubt, ask which it is before saving.
-- Superseded files and version history stay inside the workstation's own `resources/` version folder. Never move a live workstation's backups elsewhere. Distinguish: living master documents keep a changelog; dead one-off files just sit in the version folder.
-- Session-close cadence is workstation-specific. High-activity workstations (career, finances, consulting) close every session. Low-activity workstations (property, archive) close monthly. Define your cadence per workstation in the relevant CLAUDE.md.
-- Scheduled tasks stack without overlap. Retrospective weekly tasks run Friday at 10:00, 11:00, 12:00, 13:00 (one per hour). Forward-looking weekly tasks run Monday at 07:00, 08:00, 09:00. Monthly tasks run on the 1st at 10:00, 11:00, 12:00. No two tasks at the same hour.
-- When any paid connector (Apollo, Vibe, financial API, enrichment service) is about to spend credits, stop and state: the contact or request count, the credit cost, and the remaining balance if known. Wait for explicit approval before proceeding. Free actions (web search, read-only lookups) do not require this check.
 - When a Thinking HQ mode is invoked from inside any other workstation, load the relevant Thinking HQ resources and run the requested mode. Maintain the originating workstation's context. Tag outputs with both the workstation source and the mode used.
 - **Numbering methodology.** Use clean sequential integers (1, 2, 3...) for any ordered list. Sub-items use indented bullets, not fractional numbers (1a, 1.5, 0-alpha). When inserting a new step into an existing numbered list, renumber the entire list from scratch. Apply every time a file with numbered steps is edited.
-- **Handoff recommendation rule.** Whenever you prepare a session handoff, a structured prompt, or a detailed output for another model or agent to continue working on, include: (1) recommended model tier (fastest/cheapest that fits the task vs. highest capability), (2) effort estimate (approximate token budget or time), (3) whether extended thinking or deeper reasoning mode is worth the cost trade-off for this output.
 
 ## File Edit Guards
 

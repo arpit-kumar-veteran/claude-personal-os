@@ -50,7 +50,7 @@ When a workstation covers multiple people, projects, or entities, do not load al
 
 At session start, Claude reads the index. It loads the specific record only when the session needs it. This keeps context efficient and prevents irrelevant data from crowding the session.
 
-Example: health-hq covers five family members. The index lists all five with paths to their baseline files. Claude loads only the one in scope for the current session.
+Example: a family health workstation covers five people. The index lists all five with paths to their baseline files. Claude loads only the one in scope for the current session.
 
 ## The line ceiling rule
 

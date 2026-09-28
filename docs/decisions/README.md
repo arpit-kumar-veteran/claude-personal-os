@@ -15,6 +15,7 @@ This folder holds the design decisions behind the operating system pattern. Each
 | [0007](0007-skills-registry.md) | Skills registry | Recurring patterns become Markdown skills indexed in a registry. |
 | [0008](0008-interview-driven-personalisation.md) | Interview-driven personalisation | A setup skill interviews the cloner and fills placeholders. |
 | [0009](0009-sanitised-worked-examples.md) | Sanitised worked examples alongside templates | Worked examples from the private system are allowed once rewritten generically and checked for private tokens. Partially supersedes 0003. |
+| [0010](0010-basic-and-advanced-editions.md) | Basic and Advanced editions | Public repo is the Basic edition: foundation workstations, core skills, core rules. Advanced adds the rest. |
 
 ## Why ADRs
 

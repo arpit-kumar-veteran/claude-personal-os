@@ -100,7 +100,7 @@ Claude walks you through these phases, one at a time:
 | 2. File drop | Share your LinkedIn PDF, resume, or any doc. Claude reads it and skips questions it can already answer. Optional. | 2-5 min |
 | 3. Identity | 5 questions. Your name, role, what you want this OS to help with most, and where on your computer to build your OS. Claude walks you through how to choose the right root folder before asking. | 5 min |
 | 4. Voice | 4 questions. How you want Claude to write on your behalf, response style, things to avoid. | 3 min |
-| 5. Workstations | Claude shows all 16 available workstations with descriptions. Recommends 2-3 based on your answers. You pick which to install. | 5 min |
+| 5. Workstations | Claude shows the 8 included workstations with descriptions. Recommends 2-3 based on your answers. You pick which to install. | 5 min |
 | 6. Cadence | 3 questions. Weekly audit, session-close routine. | 2 min |
 | 7. Build | Claude creates your OS folder, fills in your files. Tells you exactly what was created and where. | 5 min |
 | 8. Handoff | What was built, how to use it from now on, three things to try immediately. | 2 min |
@@ -115,7 +115,7 @@ A folder on your computer (you choose where) that contains your personal AI oper
 - **`CLAUDE.md`**: your voice, preferences, and routing map. Claude reads this at the start of every session.
 - **`MEMORY.md`**: your profile and the facts Claude remembers about you. Grows session by session.
 - **1-3 workstation folders**: rules and memory for the domains you chose (job search, finance, health, meetings, etc.).
-- **A `skills/` folder**. Ten core skills pre-installed: session-close, audit-system, deep-research, humanizer, and more. Add community skills any time.
+- **A `skills/` folder**. Six core skills included: session-close, audit-system, voice-check, humanizer, and more. Add community skills any time.
 - **A weekly audit**: say "run the audit" any time. Claude checks that everything is correctly structured and reports back.
 
 The folder belongs to you. No cloud service, no subscription, no app required to use it. Edit files directly anytime, or ask Claude to edit on your behalf (it will always show you what it intends to change and wait for a yes).

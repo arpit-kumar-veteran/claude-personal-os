@@ -2,6 +2,27 @@
 
 All notable changes to this pattern are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/). Version numbers follow [Semantic Versioning](https://semver.org/) loosely: major versions reflect substantial changes to the pattern, minor versions add capabilities, patch versions fix bugs in examples or documentation.
 
+## [0.6.0] - 2026-09-28
+
+This repository is now the **Basic edition**. See ADR 0010 and the "Basic and Advanced editions" section of the README.
+
+### Removed (now Advanced edition only)
+
+- Twelve workstation examples: `finances-hq`, `health-hq`, `consulting-hq`, `venture-hq`, `life-transition-hq`, `intel-hq`, `relationship-hq`, `content-hq`, `portfolio-hq`, `visual-design`, `products-hq`, `prompt-library`.
+- Four skills: `deep-research`, `outreach`, `workstation-create-full`, `content-repurpose`.
+- Eight advanced rules from `templates/CLAUDE.md.template`: redaction-token list for public artefacts, entity mirroring across workstations, working-files location, version history location, session-close cadence tiers, scheduled-task stacking, paid-connector credit guard, handoff recommendation.
+
+### Kept
+
+- Seven foundation workstations plus `thinking-hq`, six core skills, five prompts, the guided setup, infrastructure templates, example scripts, and all docs and ADRs.
+
+### Changed
+
+- Setup catalog (Phase 5) shows the eight included workstations and points to the Advanced edition for the rest.
+- `README.md`: new "Basic and Advanced editions" section. Counts and file tree updated.
+- `skills/SKILLS-CATALOG.md`, `skills/skills-index.md`, `workstation-examples/README.md`: updated to the Basic set.
+- ADR 0010 added.
+
 ## [0.5.1] - 2026-09-28
 
 ### Fixed

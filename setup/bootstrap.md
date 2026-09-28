@@ -203,7 +203,7 @@ After all four answers, emit the phase-end summary:
 > - Words or phrases to avoid: [answer]
 > - Voice guide: [yes/no and path if yes]
 >
-> **Next up, Phase 5:** The workstation catalog. I will show you all 16 available workstations and recommend which ones fit you based on what you just told me.
+> **Next up, Phase 5:** The workstation catalog. I will show you the workstation catalog and recommend which ones fit you based on what you just told me.
 >
 > → Type **continue** when ready.
 
@@ -219,7 +219,7 @@ Say before the catalog:
 >
 > A workstation is one domain of your life that I help you manage: job search, personal finance, health, meetings, contacts. Each workstation is a folder with its own rules and memory. You can start with 1 to 3 and add more any time.
 >
-> Here are all 16 available workstations. I have marked the ones I recommend for you based on what you told me.
+> Here are the eight workstations included. I have marked the ones I recommend for you based on what you told me.
 
 Then present the catalog. Use the interview answers from Phases 3 and 4 to determine which 2 to 3 to mark as recommended. Add a one-line "Why for you:" under each recommended one.
 
@@ -236,20 +236,13 @@ Then present the catalog. Use the interview answers from Phases 3 and 4 to deter
 > | **Property HQ** | Rental or property management, maintenance records, cost tracking |
 > | **Learning HQ** | Courses, books, skills you are building, capturing what you learn |
 >
-> ### Advanced workstations
-> Add these when a domain keeps coming up and Claude keeps losing context on it.
+> ### For big decisions
 >
 > | Name | What it does for you |
 > |---|---|
 > | **Thinking HQ** | Structured thinking for big decisions: coach mode, devil's advocate, strategic planning |
-> | **Finances HQ** | Net worth, investments, savings goals, financial planning |
-> | **Health HQ** | Health tracking, lab results, supplements, medical history for your whole family |
-> | **Consulting HQ** | Freelance or consulting pipeline, proposals, client work, invoicing |
-> | **Venture HQ** | Side business or startup: market research, co-founder search, investor conversations |
-> | **Life Transition HQ** | Big life changes: relocation, career pivot, major decisions with long horizons |
-> | **Intel HQ** | Newsletters and digests processed weekly: extract what matters, discard the rest |
-> | **Relationship HQ** | Personal network management, follow-up cadence, staying in touch with people who matter |
-> | **Content HQ** | Writing, repurposing, scheduling content across platforms |
+>
+> Need finances, health, consulting, a side business, a personal CRM, or content production? Those workstations come with the Advanced edition. You can also ask me to build any workstation from the blank template after setup.
 >
 > ---
 > Based on what you told me, I recommend:

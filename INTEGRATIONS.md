@@ -45,7 +45,7 @@ Route to: brand-hq, any workstation that produces visual assets
 Adds: Claude can read designs and generate visual artefacts directly.
 
 **Apify / web scrapers**
-Route to: any workstation that needs external data (career-hq for job listings, intel-hq for market signals)
+Route to: any workstation that needs external data (career-hq for job listings, thinking-hq for decision research)
 Adds: structured web data pulled into the OS without manual research.
 
 ## Security note

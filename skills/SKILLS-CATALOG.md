@@ -8,7 +8,7 @@ Skills do not replace judgment. They replace repetition.
 
 ## Core skills
 
-These ten skills ship with every Personal Claude OS installation. No setup required: just say the trigger phrase.
+These six skills ship with every Personal Claude OS installation. No setup required: just say the trigger phrase.
 
 | Skill | What it does | Best for | Invoke by saying... |
 |---|---|---|---|
@@ -17,17 +17,19 @@ These ten skills ship with every Personal Claude OS installation. No setup requi
 | **voice-check** | Reads any written text against your voice principles. Flags tone mismatches, register errors, and phrases that do not sound like you. | Before sending an email, publishing content, or submitting any external document | "check my voice", "voice check this", "does this sound like me?" |
 | **memory-consolidation** | Cleans a MEMORY.md file that has grown stale, duplicated, or over the line ceiling. Proposes merges, deletions, and archives. | When a MEMORY.md is approaching its line limit | "consolidate memory", "clean up MEMORY.md", "memory is getting long" |
 | **humanizer** | Removes AI-writing tells from any text: passive voice, hedging phrases, hollow openers, robotic rhythm. Rewrites to sound natural and human-authored. | Any AI-generated draft that still sounds like it was written by a model | "humanize this", "make this sound more human", "remove the AI tells" |
-| **deep-research** | Fans out across multiple search angles, fetches primary sources, adversarially verifies every major claim, and synthesises a cited report with confidence levels. | Any decision that depends on accurate external facts | "research this", "deep research on...", "verify this claim" |
-| **outreach** | Drafts cold or warm outreach messages: email, LinkedIn, WhatsApp, or other channels. Adapts tone and format to the relationship and the ask. Keeps it short. One ask per message. | First contact, follow-up, or reactivating a dormant relationship | "draft an outreach to...", "write a cold email to..." |
-| **workstation-create-full** | Runs a full guided interview to create a new workstation with complete, placeholder-free CLAUDE.md, MEMORY.md, and resources/ folder. No blank templates: every field is filled from your answers. | Adding a new domain to your OS at any time | "create a new workstation", "add a workstation for..." |
-| **content-repurpose** | Turns one long-form piece (article, transcript, talk, report) into multiple formats, social post, thread, newsletter, short video script, summary, each rewritten for the platform, not just clipped. | After publishing or recording something worth spreading further | "repurpose this", "turn this into social posts", "extract a thread from this" |
 | **scheduled-task** | Sets up a recurring automated task: weekly audit, monthly close, digest processing, or any routine that should fire on a cadence without manual prompting. | Any task you want to happen automatically on a schedule | "set up a weekly audit", "schedule this to run every Monday", "automate this task" |
+
+---
+
+## Advanced edition skills
+
+The Advanced edition adds seven more skills: **deep-research** (multi-source, adversarially verified research), **outreach** (cold and warm messages), **content-repurpose** (one piece into many formats), **workstation-create-full** (guided interview for a new workstation), **financial-analysis**, **interview-prep**, and **os-health-report**. See the main README for how to get it.
 
 ---
 
 ## Community skills
 
-Community skills extend the OS beyond the core ten. They are built and maintained by OS users and distributed separately. Install any skill by dropping its `SKILL.md` into your `skills/` folder and adding a row to `skills/skills-index.md`.
+Community skills extend the OS beyond the core six. They are built and maintained by OS users and distributed separately. Install any skill by dropping its `SKILL.md` into your `skills/` folder and adding a row to `skills/skills-index.md`.
 
 | Skill area | What it does | Technical level | Find it by searching... |
 |---|---|---|---|
@@ -48,27 +50,20 @@ Use this table when you first set up or add a new workstation to know which skil
 
 | Workstation | Strongly recommended | Also worth having |
 |---|---|---|
-| career-hq | outreach, deep-research | humanizer, voice-check |
-| brand-hq / content-hq | content-repurpose, humanizer, voice-check | social media (community) |
-| finances-hq | deep-research, scheduled-task | - |
-| health-hq | deep-research | - |
-| consulting-hq | outreach, content-repurpose, deep-research | voice-check |
-| meeting-hq | session-close | scheduled-task |
-| intel-hq | deep-research, scheduled-task | - |
-| thinking-hq | deep-research | - |
-| learning-hq | deep-research | - |
-| venture-hq | deep-research, outreach | - |
+| career-hq | voice-check, humanizer | session-close |
+| brand-hq | voice-check, humanizer | - |
 | email-hq | humanizer, voice-check | - |
+| meeting-hq | session-close | scheduled-task |
 | expense-hq / property-hq | scheduled-task | - |
-| life-transition-hq | deep-research | - |
-| relationship-hq | outreach | - |
+| learning-hq | session-close | memory-consolidation |
+| thinking-hq | session-close | - |
 | **Any workstation** | session-close, audit-system | memory-consolidation |
 
 ---
 
 ## Installing a skill
 
-All ten core skills are pre-installed. For community skills:
+All six core skills are pre-installed. For community skills:
 
 1. Download the `SKILL.md` file for the skill you want.
 2. Copy it to your `skills/` folder.
