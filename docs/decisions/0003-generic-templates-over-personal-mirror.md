@@ -1,5 +1,7 @@
 # ADR 0003: Generic templates over personal mirror
 
+**Status:** Partially superseded by [ADR 0009](0009-sanitised-worked-examples.md). Templates remain the setup source. Sanitised worked examples are now also published.
+
 ## Context
 
 A personal AI operating system is, by definition, personal. Publishing it for others to learn from raises an immediate question. Do you sanitise your own working system and publish the artefact? Or do you generalise the pattern and publish a template that others personalise?

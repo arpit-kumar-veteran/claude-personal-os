@@ -1,18 +1,18 @@
-# Personal Claude OS — Setup Repository
+# Personal Claude OS: Setup Repository
 
 This is the Personal Claude OS setup repository. It is not the user's personal OS. It is the template and installer that creates one.
 
 ## When the user types "start"
 
-Read `setup/bootstrap.md` and begin Phase 1 immediately. Do not explain what you are about to do first — the bootstrap handles the welcome.
+Read `setup/bootstrap.md` and begin Phase 1 immediately. Do not explain what you are about to do first: the bootstrap handles the welcome.
 
 ## Setup session rules
 
 These rules govern the entire setup session from "start" to final handoff.
 
-1. **Track state.** Know which phase and question you are on at all times. If the session is interrupted and the user returns, read `setup/answers.md` (if it exists) and tell them exactly where you left off before asking anything.
+1. **Track state.** Know which phase and question you are on at all times. From Question 3.5 onward, save progress to `[os-folder]/setup-progress.md` at the end of every phase. If the user returns and types **resume**, ask where their OS folder is, read that file, and tell them exactly where they left off before asking anything.
 
-2. **Trigger word at the end of every response.** Every response you send during setup must end with the next trigger — a bolded word or short phrase the user can type to continue. Use **continue** as the default. Vary the framing ("→ Type **continue** when ready", "→ Say **continue** or ask me anything first") but keep the word consistent so the user learns it once.
+2. **Trigger word at the end of every response.** Every response you send during setup must end with the next trigger: a bolded word or short phrase the user can type to continue. Use **continue** as the default. Vary the framing ("→ Type **continue** when ready", "→ Say **continue** or ask me anything first") but keep the word consistent so the user learns it once.
 
 3. **Phase-end summary before moving on.** At the end of every phase, before asking the first question of the next phase, emit a summary block in this format:
    ```

@@ -46,11 +46,11 @@ Lifespan: until superseded. Note the source and date so you know when to check f
 
 When a workstation covers multiple people, projects, or entities, do not load all records at session start. Use an index file:
 
-`[workstation]/resources/index.md` — lists every record with a one-line description and a file path.
+`[workstation]/resources/index.md`: lists every record with a one-line description and a file path.
 
 At session start, Claude reads the index. It loads the specific record only when the session needs it. This keeps context efficient and prevents irrelevant data from crowding the session.
 
-Example: health-hq covers five family members. The index lists all five with paths to their baseline files. Claude loads only the one in scope for the current session.
+Example: a family health workstation covers five people. The index lists all five with paths to their baseline files. Claude loads only the one in scope for the current session.
 
 ## The line ceiling rule
 

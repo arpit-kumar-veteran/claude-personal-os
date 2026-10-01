@@ -2,6 +2,87 @@
 
 All notable changes to this pattern are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/). Version numbers follow [Semantic Versioning](https://semver.org/) loosely: major versions reflect substantial changes to the pattern, minor versions add capabilities, patch versions fix bugs in examples or documentation.
 
+## [0.6.0] - 2026-09-28
+
+This repository is now the **Basic edition**. See ADR 0010 and the "Basic and Advanced editions" section of the README.
+
+### Removed (now Advanced edition only)
+
+- Twelve workstation examples: `finances-hq`, `health-hq`, `consulting-hq`, `venture-hq`, `life-transition-hq`, `intel-hq`, `relationship-hq`, `content-hq`, `portfolio-hq`, `visual-design`, `products-hq`, `prompt-library`.
+- Four skills: `deep-research`, `outreach`, `workstation-create-full`, `content-repurpose`.
+- Eight advanced rules from `templates/CLAUDE.md.template`: redaction-token list for public artefacts, entity mirroring across workstations, working-files location, version history location, session-close cadence tiers, scheduled-task stacking, paid-connector credit guard, handoff recommendation.
+
+### Kept
+
+- Seven foundation workstations plus `thinking-hq`, six core skills, five prompts, the guided setup, infrastructure templates, example scripts, and all docs and ADRs.
+
+### Changed
+
+- Setup catalog (Phase 5) shows the eight included workstations and points to the Advanced edition for the rest.
+- `README.md`: new "Basic and Advanced editions" section. Counts and file tree updated.
+- `skills/SKILLS-CATALOG.md`, `skills/skills-index.md`, `workstation-examples/README.md`: updated to the Basic set.
+- ADR 0010 added.
+
+## [0.5.1] - 2026-09-28
+
+### Fixed
+
+- `setup/bootstrap.md`: the Skills phase promised in `0-CLICK-HERE-TO-START.md` and in the v0.4.2 notes was never added to the wizard. It is now Phase 9 (optional). "Save and exit" becomes the final step after it.
+- `setup/bootstrap.md`: phase headers said "Phase N of 8" while the flow has nine phases. Now "of 9". The Phase 1 roadmap lists Phase 9.
+- Resume after an interruption: progress was saved to `setup/answers.md` inside the installer folder, which broke the rule that the installer is never written to and does not survive a Cowork upload. Progress now lives in `[os-folder]/setup-progress.md`, written from Question 3.5 onward and updated after every phase. The user types **resume** to continue. `CLAUDE.md`, `README.md`, `0-CLICK-HERE-TO-START.md`, and `SETUP-SKILL.md` updated to match.
+- App paths: Claude Code in the desktop app works on Windows as well as macOS, and the Claude Code CLI works with the Pro plan login. The old text said "macOS only" and "API credits required". Install pointer now links to the official docs instead of an npm command.
+- Em dashes: 200+ had crept back in during v0.4 and v0.5 despite the zero-em-dash voice rule. All replaced.
+- `SETUP-SKILL.md` status header said "not yet implemented". It shipped in v0.4.0.
+- `ROADMAP.md` rewritten to reflect what actually shipped. The old file still called v0.1 "current".
+
+### Added
+
+- ADR 0009 records the move from "generic templates only" (ADR 0003) to also publishing sanitised worked examples from the private system, which is what v0.3.0 and v0.5.0 did.
+
+## [0.5.0] - 2026-06-16
+
+### Added
+
+- Four workstation examples: `portfolio-hq` (publishing pipeline for public artefacts), `visual-design` (format-agnostic visual output), `products-hq` (ingredient vetting with a five-check gate), `prompt-library` (named reusable prompts registry).
+
+### Changed
+
+- `career-hq`: MODE A/B split, warm-path protocol, double opt-in for introductions, ATS guidance, cover letter gate.
+- `thinking-hq`: Operator and Council modes, mode selection matrix, override phrases, mandatory output tagging.
+- `meeting-hq`, `intel-hq`, `health-hq`, `expense-hq`, `brand-hq`, `life-transition-hq`: role statements, verification steps, and scope notes brought in line with the private system.
+
+## [0.4.2] - 2026-06-16
+
+### Added
+
+- `skills/SKILLS-CATALOG.md`: every core skill with description, trigger phrases, community skills section, and a workstation-to-skill recommendation matrix.
+- `skills/skills-watchlist.md`: template for tracking community skills not yet evaluated.
+- `SETUP-SKILL.md` Section 7 (Skills) with its output schema.
+
+### Changed
+
+- `templates/CLAUDE.md.template`: Creating New Projects section, two watchlist rules, redaction-token rule for public artefacts, auto-write exception pattern, style calibration rule, MEMORY/CHANGELOG deduplication rule.
+
+## [0.4.1] - 2026-06-16
+
+### Changed
+
+- `templates/CLAUDE.md.template`: five governance rules added: MEMORY.md line ceiling, per-workstation ARCHIVE.md system, reliability defaults, numbering methodology, handoff recommendation rule.
+- `finances-hq`, `health-hq`, `thinking-hq`: recency and no-spurious-flip rules.
+
+## [0.4.0] - 2026-06-16
+
+### Added
+
+- Root `CLAUDE.md`: auto-loaded when the folder is opened. Typing `start` launches the guided setup. Defines the trigger-word, phase-summary, and off-track rules.
+- Guided setup wizard in `setup/bootstrap.md`: roadmap shown up front, one question at a time, a summary block and trigger word at the end of every phase, a workstation catalog with recommendations drawn from the interview.
+
+### Changed
+
+- `README.md` and `0-CLICK-HERE-TO-START.md`: three steps (download, open, type `start`). Three app paths explained for macOS and Windows.
+- Setup flow: root-folder guidance before the user picks where the OS lives.
+- Ten plain-language fixes from a test run with a non-technical user: explicit Cowork upload steps, plain-English paths, installer vs personal OS explained, LinkedIn URL option first, jargon removed from cadence questions, display names for workstations.
+
 ## [0.3.0] - 2026-06-04
 
 ### Added

@@ -8,7 +8,7 @@ Track community skills you have heard about but have not yet installed or evalua
 
 1. When you hear about a skill worth investigating, add a row below.
 2. Set the status to **Unevaluated** until you have read the skill's description and decided.
-3. When you install a skill, move it to **Installed** — then register it in `skills/skills-index.md` and delete the row here once confirmed working.
+3. When you install a skill, move it to **Installed**, then register it in `skills/skills-index.md` and delete the row here once confirmed working.
 4. Mark **Skipped** for skills you looked at and decided not to use.
 
 ---
@@ -28,8 +28,8 @@ Check these periodically (monthly, or after seeing a skill post) to find new com
 | Source | What to look for |
 |---|---|
 | charliehills.substack.com | Charlie Hills publishes new skill packs and stack updates |
-| github.com/topics/claude-code-skills | Community skills — filter by recently updated and star count |
-| github.com/rohitg00/awesome-claude-code-toolkit | Curated list — check the Skills section |
+| github.com/topics/claude-code-skills | Community skills: filter by recently updated and star count |
+| github.com/rohitg00/awesome-claude-code-toolkit | Curated list: check the Skills section |
 | Claude Code marketplace / Cowork plugins | Plugin releases from the Claude ecosystem |
 
 ---

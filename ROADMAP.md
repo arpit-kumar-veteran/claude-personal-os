@@ -1,58 +1,36 @@
 # Roadmap
 
-This is a versioned pattern, not a finished product. Each release adds one substantial capability. The list below is the current plan. It will change as v0.1 gets used.
+This is a versioned pattern, not a finished product. Each release adds one substantial capability. Plans change as people use it. Full detail for every shipped version is in [CHANGELOG.md](CHANGELOG.md).
 
-## v0.1: Initial release (current)
+## Shipped
 
-Shipped:
+| Version | What it added |
+|---|---|
+| v0.1 | Generic templates with placeholders, the audit skill, five prompts, eight ADRs, two example scripts, a manual setup guide. |
+| v0.2 | Filled-in workstation examples, the skills registry, the first-week guide, the integrations reference. |
+| v0.3 | Advanced workstations, research and outreach skills, archive and scheduled-task infrastructure. |
+| v0.4 | The guided setup wizard. Type `start` and Claude interviews you and builds your OS. Skills catalog. |
+| v0.5 | More workstation examples and rules brought across from the private system (see ADR 0009). |
+| v0.5.1 | Setup wizard fixes: Skills phase, phase numbering, resume from the OS folder, app-path corrections. |
+| v0.6.0 | Split into Basic (this repo) and Advanced editions. See ADR 0010. |
 
-- Generic root and workstation templates with explicit placeholders.
-- Reusable skill: `audit-system`.
-- Reusable prompts library covering audit, session close, workstation create, voice check, and memory consolidation.
-- Eight Architecture Decision Records.
-- Two runnable example scripts (expense pipeline, net worth dashboard) with fictional sample data.
-- A non-coder-friendly `GETTING-STARTED.md` deployment guide.
+## Next
 
-Personalisation is manual in this release. The cloner replaces each `{{REPLACE: ...}}` marker by hand following the guide.
+- **Releases.** Tag every version on GitHub so a non-technical user can download a stable ZIP with release notes.
+- **Setup demo.** A short screen recording of typing `start` and finishing setup, shown at the top of the README.
+- **Automated checks.** A GitHub Action that flags broken links, em dashes, and workstation counts that do not match the catalog.
+- **Quick start.** A 10-minute setup path: one workstation, no file drop, defaults for everything else.
+- **First real case study.** One sanitised deployment written up using `case-studies/early-adopter-template.md`.
 
-## v0.2: Self-installing setup skill (next)
+## Exploratory
 
-A Claude skill that:
+Not committed. Each needs its own ADR before any work starts.
 
-- Walks the cloner through an interview of around 30 questions across six sections.
-- Captures answers to a local file (gitignored).
-- Substitutes every `{{REPLACE: ...}}` marker across the templates from the captured answers.
-- Prints a diff before writing.
-- Re-runnable. Existing answers are preserved; new questions added in future versions are asked once.
-
-The design spec is already in this repository at [`SETUP-SKILL.md`](SETUP-SKILL.md). v0.2 is the implementation.
-
-## v0.3: A second worked example
-
-A complete worked example of a second domain (suggested: a meeting-notes workstation with a transcript-to-action-items pipeline). Demonstrates how a workstation grows from one folder to a full pipeline.
-
-Includes:
-
-- The workstation's CLAUDE.md and MEMORY.md, personalised with example content.
-- A Python script that processes sample transcripts into structured output.
-- A skill that runs the pipeline on demand.
-- A CHANGELOG entry showing how a workstation evolves between releases.
-
-## v0.4: Team variant
-
-A variant of the pattern for two-person workflows. The two-tier memory becomes three: shared root, individual layers, scoped workstations. File edit guards extend to attribution (who proposed what, who approved).
-
-This is exploratory. The single-user pattern is the focus through v0.3. A team variant should not slow the single-user release cycle.
-
-## v0.5 and beyond: exploratory
-
-Items being considered for later releases. Not committed. Each is a candidate for its own ADR before any code is written.
-
+- Team variant: shared root, individual layers, scoped workstations, attribution on every approved change.
 - Voice capture on mobile that writes back into the system.
-- Multi-model fallback (use a smaller model for routine audits, larger for design work).
-- A web reader that renders the entire OS as a static site for review.
+- Smaller model for routine audits, larger model for design work.
 - A compliance score reported as a single number alongside the audit.
 
 ## How decisions get made
 
-A new release plan or scope change is proposed as a GitHub Issue first. If the change is non-obvious, a new ADR captures the reasoning. Roadmap items only move from exploratory to committed once their ADR is written.
+A new release plan or scope change is proposed as a GitHub Issue first. If the change is non-obvious, a new ADR captures the reasoning. Items only move from exploratory to committed once their ADR is written.

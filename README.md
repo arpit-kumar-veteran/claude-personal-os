@@ -9,18 +9,18 @@ You use Claude every day. Every conversation starts from zero. Your context, you
 
 ## Three steps to get started
 
-You are on GitHub — the website where this project lives. The steps below download it to your computer.
+You are on GitHub: the website where this project lives. The steps below download it to your computer.
 
 **1. Download this repo.**
 Click the green **Code** button near the top right of this page, then **Download ZIP**. Once it downloads, open your Downloads folder and double-click the ZIP to unzip it. You will get a folder called `claude-personal-os-main`.
 
 **2. Open the folder in your Claude app.**
 
-Works on the **Claude Pro plan ($20/month)**. Three paths — pick the one that fits:
+Works on the **Claude Pro plan ($20/month)**. Three paths. Pick the one that fits:
 
-- **Path A — Claude desktop app, Cowork tab (recommended, $20 Pro plan, macOS + Windows):** Open the Claude desktop app, click the **Cowork** tab in the top left corner, upload the `claude-personal-os-main` folder, type `start`.
-- **Path B — Claude Code inside the Claude desktop app (macOS only, $20 Pro plan):** Switch to the **Claude Code** tab in the top left corner of the Claude desktop app, open the folder, type `start`.
-- **Path C — Claude Code CLI (advanced, coders only, API credits required):** `cd claude-personal-os-main` then `claude` in your terminal. See [0-CLICK-HERE-TO-START.md](0-CLICK-HERE-TO-START.md) for full macOS and Windows instructions.
+- **Path A: Claude desktop app, Cowork tab (recommended, $20 Pro plan, macOS + Windows):** Open the Claude desktop app, click the **Cowork** tab in the top left corner, upload the `claude-personal-os-main` folder, type `start`.
+- **Path B: Claude Code inside the Claude desktop app ($20 Pro plan, macOS + Windows):** Switch to the **Claude Code** tab in the top left corner of the Claude desktop app, open the folder, type `start`.
+- **Path C: Claude Code CLI (for command-line users, same $20 Pro plan):** `cd claude-personal-os-main` then `claude` in your terminal. See [0-CLICK-HERE-TO-START.md](0-CLICK-HERE-TO-START.md) for full macOS and Windows instructions.
 
 **3. Type: `start`**
 
@@ -34,16 +34,17 @@ Claude walks you through a guided setup in about 30 minutes. Every response tell
 
 The flow:
 
-1. **Welcome** — Claude shows you the full setup roadmap so you know what to expect.
-2. **File drop (optional)** — Share your LinkedIn PDF, resume, or any document about yourself. Claude reads it and skips questions it can answer from there.
-3. **Identity interview** — 5 short questions. Who you are, what you do, what you want this OS to help with most.
-4. **Voice and preferences** — 4 short questions. How you want Claude to write on your behalf, response length, words to avoid.
-5. **Workstation catalog** — Claude shows all 16 available workstations with a one-line description of each. Based on your interview answers, it marks 2-3 as "Recommended for you" and explains why. You pick 1-3 to start.
-6. **Cadence** — 3 questions. Weekly audit, session-close routine.
-7. **Build** — Claude creates your OS folder, fills in your files, and tells you exactly what it created and where.
-8. **Handoff** — You get a working personal OS, a first-week guide, and the three things to try right now.
+1. **Welcome**: Claude shows you the full setup roadmap so you know what to expect.
+2. **File drop (optional)**: Share your LinkedIn PDF, resume, or any document about yourself. Claude reads it and skips questions it can answer from there.
+3. **Identity interview**: 5 short questions. Who you are, what you do, what you want this OS to help with most.
+4. **Voice and preferences**: 4 short questions. How you want Claude to write on your behalf, response length, words to avoid.
+5. **Workstation catalog**: Claude shows the 8 included workstations with a one-line description of each. Based on your interview answers, it marks 2-3 as "Recommended for you" and explains why. You pick 1-3 to start.
+6. **Cadence**: 3 questions. Weekly audit, session-close routine.
+7. **Build**: Claude creates your OS folder, fills in your files, and tells you exactly what it created and where.
+8. **Handoff**: You get a working personal OS, a first-week guide, and the three things to try right now.
+9. **Skills (optional)**: Claude recommends 2-3 skills that fit your workstations. Install, bookmark, or skip.
 
-If you go off-topic during setup, Claude answers and brings you back. If you stop midway and return later, type `start` again — Claude will find where you left off and resume from there.
+If you go off-topic during setup, Claude answers and brings you back. If you stop midway and return later, type `resume` and tell Claude where your OS folder is. Claude picks up where you left off.
 
 ---
 
@@ -51,10 +52,10 @@ If you go off-topic during setup, Claude answers and brings you back. If you sto
 
 A folder on your computer that holds your personal AI operating system:
 
-- **`CLAUDE.md`** — your preferences, voice rules, and routing map. Claude reads this at the start of every session.
-- **`MEMORY.md`** — your profile and the facts Claude needs to remember about you. Grows over time.
-- **1-3 workstation folders** — domain-specific rules and memory for the areas you chose (job search, finance, health, etc.).
-- **A weekly audit routine** — run it by saying "run the audit". Claude checks that everything is correctly structured and reports back.
+- **`CLAUDE.md`**: your preferences, voice rules, and routing map. Claude reads this at the start of every session.
+- **`MEMORY.md`**: your profile and the facts Claude needs to remember about you. Grows over time.
+- **1-3 workstation folders**: domain-specific rules and memory for the areas you chose (job search, finance, health, etc.).
+- **A weekly audit routine**: run it by saying "run the audit". Claude checks that everything is correctly structured and reports back.
 
 No app installed. No cloud service. No database. The folder is yours. Move it, back it up, edit it by hand anytime.
 
@@ -65,6 +66,24 @@ No app installed. No cloud service. No database. The folder is yours. Move it, b
 **Before:** Claude is capable but context-blind. Every session you re-explain your role, your projects, your communication style. You get good answers, always from a stranger.
 
 **After:** Claude opens each session knowing your workstations, your voice rules, and what you decided last week. It routes work correctly, proposes memory updates, audits itself weekly, and compounds over time.
+
+---
+
+## Basic and Advanced editions
+
+This repository is the **Basic edition**. It is free, complete, and enough to run a working personal OS.
+
+| | Basic (this repo) | Advanced |
+|---|---|---|
+| Guided setup (type `start`) | Yes | Yes |
+| Workstation examples | 8: career, email, brand, meeting, expense, property, learning, thinking | 20: adds finances, health, consulting, venture, life transition, intel, relationships, content, portfolio, visual design, products, prompt library |
+| Skills | 6 core skills | 13 skills: adds deep research, outreach, content repurposing, full workstation creation, financial analysis, interview prep, OS health report |
+| Prompts library | 5 prompts | 10 prompts |
+| Governance rules in the template | Core rules | Core rules plus 14 advanced rules (entity mirroring across workstations, version control, scheduled-task stacking, paid-connector guards, financial source-of-truth, and more) |
+| Pre-built resource files | None | 6 ready-to-use files (resume template, outreach templates, proposal template, and more) |
+| Week 4 guide | No | Yes |
+
+Start with Basic. If you outgrow it, message me on [LinkedIn](https://www.linkedin.com/in/arpit-kumar-veteran) for access to the Advanced edition.
 
 ---
 
@@ -98,8 +117,8 @@ In brief: two tiers of memory (root plus per-workstation), strict file edit guar
 ├── CONTRIBUTING.md                    (how to contribute)
 ├── LICENSE                            (MIT)
 ├── templates/                         (blank CLAUDE.md and MEMORY.md templates)
-├── workstation-examples/              (16 filled-in workstation examples)
-├── skills/                            (10 registered skills)
+├── workstation-examples/              (8 filled-in workstation examples)
+├── skills/                            (6 core skills)
 ├── infrastructure/                    (scheduled task templates and archive system)
 ├── prompts/                           (5 reusable prompts)
 ├── docs/decisions/                    (Architecture Decision Records)

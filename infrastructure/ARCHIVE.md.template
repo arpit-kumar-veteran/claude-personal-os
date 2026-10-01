@@ -25,7 +25,7 @@ Projects that finished, shipped, or were formally closed. Each entry: name, clos
 
 Decisions that were made and then overturned or replaced. Keeping these prevents re-litigating closed questions with no new information.
 
-- {{REPLACE: YYYY-MM-DD}}: {{REPLACE: original decision}} — superseded by: {{REPLACE: what replaced it and why}}
+- {{REPLACE: YYYY-MM-DD}}: {{REPLACE: original decision}}. Superseded by: {{REPLACE: what replaced it and why}}
 
 ## Inactive Contacts
 
