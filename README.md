@@ -1,6 +1,7 @@
 # Personal Claude OS
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/arpit-kumar-veteran/claude-personal-os)](https://github.com/arpit-kumar-veteran/claude-personal-os/releases/latest)
 ![Last commit](https://img.shields.io/github/last-commit/arpit-kumar-veteran/claude-personal-os)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Arpit_Kumar-0A66C2?logo=linkedin)](https://www.linkedin.com/in/arpit-kumar-veteran)
 ![Built with Claude](https://img.shields.io/badge/Built_with-Claude-D97757)

@@ -13,6 +13,7 @@ This is a versioned pattern, not a finished product. Each release adds one subst
 | v0.5 | More workstation examples and rules brought across from the private system (see ADR 0009). |
 | v0.5.1 | Setup wizard fixes: Skills phase, phase numbering, resume from the OS folder, app-path corrections. |
 | v0.6.0 | Split into Basic (this repo) and Advanced editions. See ADR 0010. |
+| v2026.10 | First stable, date-versioned release. Versions are now `YEAR.MONTH`. |
 
 ## Next
 
