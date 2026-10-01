@@ -1,6 +1,16 @@
 # Changelog
 
-All notable changes to this pattern are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/). Version numbers follow [Semantic Versioning](https://semver.org/) loosely: major versions reflect substantial changes to the pattern, minor versions add capabilities, patch versions fix bugs in examples or documentation.
+All notable changes to this pattern are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/). From 2026.10 onward, versions are date-based: `YEAR.MONTH` of the release (for example 2026.10), with a third number for fixes in the same month (2026.10.1). Earlier versions (0.1.0 to 0.6.0) used numbered versions and are kept below as they were.
+
+## [2026.10] - 2026-10-01
+
+First date-versioned release. This is the stable Basic edition: it bundles 0.5.1 and 0.6.0 and switches to date-based version numbers.
+
+### Highlights
+
+- Guided setup: type `start` and Claude builds your personal OS in about 30 minutes, now with an optional Skills step and resume from your OS folder.
+- 8 workstations, 6 core skills, 5 prompts, and the core governance rules. Advanced edition available on request.
+- Clean docs: up-to-date changelog and roadmap, corrected app instructions for macOS and Windows, voice rules applied across every file.
 
 ## [0.6.0] - 2026-09-28
 
